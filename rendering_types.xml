@@ -434,7 +434,7 @@
 		<type tag="man_made" value="wastewater_plant" minzoom="6" />
 		<type tag="man_made" value="water_works" minzoom="6" />
 		<type tag="man_made" value="works" minzoom="6" />
-		<type tag="man_made" value="cutline" minzoom="15" />
+		<type tag="man_made" value="cutline" minzoom="12" />
 		<type tag="man_made" value="groyne" minzoom="13" />
 		<type tag="man_made" value="breakwater" minzoom="13" />
 		<type tag="man_made" value="pier" minzoom="13" />
@@ -697,6 +697,7 @@
 		<type tag="natural" value="wood" minzoom="6" />
 		<type tag="landuse" value="wood" minzoom="6"
 			target_tag="natural" target_value="wood" poi_category="natural" />
+		<type tag="natural" value="tree_row" minzoom="12" />
 		<type tag="contour" value="elevation" minzoom="11" />
 	</category>
 	<category name="contourtype">
@@ -927,10 +928,10 @@
 	</category>
 	
 	<category name="other">
-		<type tag="fixme" minzoom="14" nameTags="fixme"/>
+<!--		<type tag="fixme" minzoom="14" nameTags="fixme"/>
 		<type tag="description" nameTags="description" minzoom="14"/>
 		<type tag="inscription" nameTags="inscription" minzoom="14"/>
-		<type tag="note" minzoom="14" nameTags="note"/>
+		<type tag="note" minzoom="14" nameTags="note"/>     -->
 		<type tag="embankment" value="yes" minzoom="14"/>
 		<type tag="entrance" value="main" nameTags="addr:flats" minzoom="18"/>
 		<type tag="entrance" value="yes" nameTags="addr:flats" minzoom="19"/>
