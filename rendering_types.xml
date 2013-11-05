@@ -43,6 +43,7 @@
 	<type tag="layer" value="+5" target_value="1" minzoom="10" additional="true"/>
 	<type tag="layer" value="-5" target_value="-1" minzoom="10" additional="true"/>
 	<type tag="covered" value="yes" target_tag="layer" target_value="-1" minzoom="10" additional="true"/>
+	<type tag="tunnel" value="building_passage" target_tag="layer" target_value="-1" minzoom="10" additional="true"/>
 
 	<!--
 	<type tag="height" value="*" minzoom="15" additional="true"/>

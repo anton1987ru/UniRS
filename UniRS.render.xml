@@ -7,7 +7,7 @@
 	<renderingProperty attr="showSurfaceGrade" name=" Quality of roads" description="Show the quality of roads" type="boolean" possibleValues=""/>
 	<renderingProperty attr="showAccess" name=" Show the type of access" description="Show the type of access" type="boolean" possibleValues=""/>
 	<renderingProperty attr="showCycleRoutes" name="Cycle routes (bicycle mode)" description="Show bicycle routes (bicycle mode)" type="boolean" possibleValues=""/>
-	<renderingProperty attr="showNotes" name=" Fixme, note, description" description="Show fixme, note, description, inscription" type="boolean" possibleValues=""/>
+<!--	<renderingProperty attr="showNotes" name=" Fixme, note, description" description="Show fixme, note, description, inscription" type="boolean" possibleValues=""/> -->
 	<renderingProperty attr="lessIntrusiveShopsFood" name=" Less intrusive shops+food" description="Suppress display of most shops and food (+drink) POIs until zoom level 19" type="boolean" possibleValues=""/>
 	<renderingProperty attr="lessIntrusiveBanksHealthPost" name="Less intr banks+health+post" description="Suppress display of most banks, atm, health and post amenities (except hospitals) until zoom level 19" type="boolean" possibleValues=""/>
 	<renderingProperty attr="lessDetails" name=" Less details" description="Suppress display of some details on low and middle zoom levels" type="boolean" possibleValues=""/>
@@ -1249,7 +1249,7 @@
 		</group>
 
 		<!-- Added support of man_made=cutline tag -->
-		<filter noPolygons="false" tag="man_made" value="cutline" minzoom="12" color="#FFFFFF">
+		<filter noPolygons="false" tag="man_made" value="cutline" minzoom="12" color="#f1eae4">
 			<groupFilter>
 				<filter minzoom="12" maxzoom="12" strokeWidth="1.5"/>
 				<filter minzoom="13" maxzoom="13" strokeWidth="2"/>
