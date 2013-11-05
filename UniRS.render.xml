@@ -202,9 +202,10 @@
 			<filter minzoom="13" tag="landuse" value="railway"/>
 		</group>
 
-
-			<filter tag="natural" value="tree_row" minzoom="18" textSize="12" textColor="#444444" textHaloRadius="1" textDy="-1" textOnPath="true"/>
-			<filter tag="natural" value="tree_row" minzoom="16" textSize="10" textColor="#444444" textHaloRadius="1" textDy="-2" textOnPath="true"/>
+			<filter minzoom="16" maxzoom="17" textSize="10" textColor="#444444" textHaloRadius="1" textDy="-2" tag="man_made" value="cutline" textOnPath="true"/>
+			<filter minzoom="18" textSize="12" textColor="#444444" textHaloRadius="1" textDy="-1" tag="man_made" value="cutline" textOnPath="true"/>
+			<filter minzoom="16" maxzoom="17" textSize="10" textColor="#444444" textHaloRadius="1" textDy="-2" tag="natural" value="tree_row" textOnPath="true"/>
+			<filter minzoom="18" textSize="12" textColor="#444444" textHaloRadius="1" textDy="-1" tag="natural" value="tree_row" textOnPath="true"/>
 
 		<!-- Outline added to some landuses fonts -->
 		<group textSize="12" textColor="#000000" textHaloRadius="1" textDy="7" textWrapWidth="20">
@@ -1259,6 +1260,7 @@
 			<groupFilter nightMode="true" color="#003333"/>
 		</filter>
 
+		<!-- Added support of natural=tree_row tag -->
 		<filter noPolygons="false" tag="natural" value="tree_row" minzoom="12" color="#8fd075" cap="ROUND">
 			<groupFilter>
 				<filter lessDetails="false" minzoom="12" maxzoom="12" strokeWidth="1"/>
