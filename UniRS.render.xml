@@ -306,6 +306,9 @@
 		<!-- Disabling highway=ford (point) at zooms 13-14 -->
 		<filter minzoom="13" maxzoom="14" disable="true" tag="highway" value="ford"/>
 
+		<!-- Added support of noexit=yes -->
+		<filter minzoom="15" icon="highway_mini_roundabout" tag="noexit" value="yes"/>
+
 		<!-- Added support of highway=crossing tag. Icon railway_level_crossing for now. -->
 		<filter minzoom="16" icon="railway_level_crossing" tag="highway" value="crossing"/>
 		<!-- Always show railway=level_crossing icon, not only in car mode -->

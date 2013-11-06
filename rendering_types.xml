@@ -111,6 +111,7 @@
 		<type tag="highway" value="speed_camera" minzoom="16" poi_category="transportation"/>
 		<type tag="highway" value="street_lamp" minzoom="16" />
 		<type tag="highway" value="crossing" minzoom="15"/>
+		<type tag="noexit" value="yes" minzoom="16"/>
 
 	</category>
 	
@@ -921,6 +922,7 @@
 		<type tag="sport" value="tennis" minzoom="15" />
 		<type tag="sport" value="toboggan" minzoom="15" />
 		<type tag="sport" value="volleyball" minzoom="15" />
+		<type tag="golf" value="hole" minzoom="15" nameTags="ref,par" poi_prefix="golf_"/>
 	</category>
 	
 	<category name="osmwiki" poi_tag="osmwiki" poi_category="osmwiki"/>
