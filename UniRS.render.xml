@@ -47,13 +47,13 @@
 	<text>
 
 	<!-- Added support of fixme, note, description and inscription tags -->
-		<group showNotes="true">
+<!--		<group showNotes="true">
 			<filter tag="fixme" value=""/>
 			<filter tag="note" value=""/>
 			<filter tag="description" value=""/>
 			<filter tag="inscription" value=""/>
 			<groupFilter textSize="10" minzoom="16" textColor="#000000" textHaloRadius="1" textDy="7"/>
-		</group>
+		</group> -->
 <!--			<filter minzoom="18" textColor="#ff0000" textSize="8" textDy="-7" tag="entrance" value="yes" nameTag="addr:flats" textOrder="101"/>   -->
 
 		<group showCycleRoutes="true">
