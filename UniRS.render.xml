@@ -33,6 +33,11 @@
 			<filter tag="power" value="line" order="50"/>
 			<filter tag="power" value="minor_line" order="50"/>
 
+			<filter layer="1" tag="highway" value="services" order="81"/>
+			<filter tag="highway" value="services" order="51"/>
+			<filter layer="1" tag="highway" value="raceway" order="81"/>
+			<filter tag="highway" value="raceway" order="51"/>
+
 			<filter tag="embankment" value="yes" order="30"/>
 			<filter tag="man_made" value="embankment" order="30"/>
 		</group>
