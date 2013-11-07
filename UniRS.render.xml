@@ -802,7 +802,7 @@
 					<groupFilter layer="1" nightMode="true" shadowColor="#666666" shadowRadius="3"/>
 				</groupFilter>
 				<groupFilter tag="highway" value="road" color="#cccccc">
-					<filter nightMode="true" color="#999999"/>
+					<filter nightMode="true" color="#cccccc"/>
 				</groupFilter>
 			</group>
 
