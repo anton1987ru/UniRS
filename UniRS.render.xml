@@ -157,12 +157,14 @@
 			<filter minzoom="6" textSize="20" textBold="true" textDy="1" tag="place" value="city" textOrder="4"/>
 			<filter minzoom="6" textSize="16" textBold="true" textDy="1" tag="place" value="town" textOrder="5"/>
 			<filter minzoom="11" textSize="14" tag="place" value="village" textOrder="10"/>
+			<groupFilter nightMode="true" textColor="#444444"/>
 		</group>
 		<group textColor="#000000" textWrapWidth="20" textHaloRadius="1">
 			<filter minzoom="11" textSize="13" tag="place" value="hamlet" textOrder="12"/>
 			<filter minzoom="11" textSize="14" tag="place" value="suburb" textOrder="12"/>
 			<filter minzoom="11" textSize="13" tag="place" value="locality" textColor="#868686" textOrder="15"/>
 			<filter minzoom="11" textSize="14" tag="place" value="island" textOrder="10"/>
+			<groupFilter nightMode="true" textColor="#444444"/>
 		</group>
 
 
@@ -194,8 +196,8 @@
 			<groupFilter textColor="#000000" textHaloRadius="1"/>
 			<groupFilter nightMode="true" textColor="#444444" textHaloRadius="1"/>
 		</group>
-		<filter minzoom="18" maxzoom="18" textSize="10" textColor="#444444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref"/>
-		<filter minzoom="19" textSize="10" textColor="#444444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref" nameTag2="addr:flats"/>
+<!--		<filter minzoom="18" maxzoom="18" textSize="10" textColor="#444444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref"/>
+		<filter minzoom="19" textSize="10" textColor="#444444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref" nameTag2="addr:flats"/>  -->
 
 		<!-- Outline added to some landuses fonts. Added support of some landuse names. -->
 		<group textSize="12" textColor="#444444" textHaloRadius="1" textDy="7" textWrapWidth="20">
@@ -489,7 +491,7 @@
 				<filter nightMode="true" minzoom="11" color="#19283d" tag="landuse" value="industrial"/>
 				<filter nightMode="true" minzoom="12" color="#19283d" tag="landuse" value="railway"/>
 				<filter nightMode="true" minzoom="12" color="#583741" tag="landuse" value="commercial"/>
-				<filter nightMode="true" minzoom="10" color="#4e4346" tag="landuse" value="residential"/>
+				<filter nightMode="true" minzoom="10" color="#443f41" tag="landuse" value="residential"/>
 				<filter nightMode="true" minzoom="12" color="#505501" tag="landuse" value="landfill"/>
 				<filter nightMode="true" minzoom="15" color="#562e4b" color_2="#71554e" strokeWidth_2=":1" tag="amenity" value="kindergarten"/>
 				<filter nightMode="true" minzoom="15" color="#562e4b" color_2="#71554e" strokeWidth_2=":1" tag="amenity" value="school"/>
@@ -798,6 +800,9 @@
 					<groupFilter additional="access=no" color_3="#00000000"/>
 					<groupFilter additional="access=private" color_3="#00000000"/>
 					<groupFilter layer="1" nightMode="true" shadowColor="#666666" shadowRadius="3"/>
+				</groupFilter>
+				<groupFilter tag="highway" value="road" color="#cccccc">
+					<filter nightMode="true" color="#999999"/>
 				</groupFilter>
 			</group>
 
