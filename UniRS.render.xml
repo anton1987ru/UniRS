@@ -958,11 +958,11 @@
 		</group>
 
 		<!-- Changing look of proposed and construction highways -->
-		<filter tag="highway" value="construction" minzoom="12" maxzoom="13" color="#79a8fd" strokeWidth="6" cap="ROUND" color_2="#ffffff" strokeWidth_2="4" pathEffect_2="6_12"/>
-		<filter tag="highway" value="construction" minzoom="14" color="#79a8fd" strokeWidth="8" cap="ROUND" color_2="#ffffff" strokeWidth_2="6" pathEffect_2="8_15"/>
+		<filter tag="highway" value="construction" minzoom="12" maxzoom="13" color="#79a8fd" strokeWidth="6" cap="ROUND" color_2="#ffffff" strokeWidth_2="4" pathEffect_2="5_14"/>
+		<filter tag="highway" value="construction" minzoom="14" color="#79a8fd" strokeWidth="8" cap="ROUND" color_2="#ffffff" strokeWidth_2="6" pathEffect_2="6_19"/>
 		<group>
-			<filter tag="highway" value="proposed" minzoom="12" maxzoom="13" color="#16333333" strokeWidth="6" cap="ROUND" color_2="#44ffffff" strokeWidth_2="4" pathEffect_2="6_12"/>
-			<filter tag="highway" value="proposed" minzoom="14" color="#16333333" strokeWidth="8" cap="ROUND" color_2="#44ffffff" strokeWidth_2="6" pathEffect_2="8_15"/>
+			<filter tag="highway" value="proposed" minzoom="12" maxzoom="13" color="#16333333" strokeWidth="6" cap="ROUND" color_2="#44ffffff" strokeWidth_2="4" pathEffect_2="5_14"/>
+			<filter tag="highway" value="proposed" minzoom="14" color="#16333333" strokeWidth="8" cap="ROUND" color_2="#44ffffff" strokeWidth_2="6" pathEffect_2="6_19"/>
 			<groupFilter nightMode="true" color="#22999999"/>
 		</group>
 
