@@ -17,6 +17,9 @@
 	<!-- Show more small-sized polygons when lessDetails mode is not active -->
 		<filter lessDetails="false" attrIntValue="30"/>
 	</renderingAttribute>
+<renderingAttribute name="gpxColor">
+		<filter attrColorValue="#99f40977"/>
+</renderingAttribute>
 
 	<order>
 
