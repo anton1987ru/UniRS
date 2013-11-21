@@ -108,6 +108,31 @@
 			</group>
 
 			<group>
+				<filter tag="highway" value="tertiary" nameTag="" textOrder="8"/>
+				<filter tag="highway" value="tertiary_link" nameTag="" textOrder="9"/>
+
+				<filter tag="highway" value="road" textOrder="9"/>
+				<filter tag="highway" value="unclassified" textOrder="9"/>
+				<filter tag="highway" value="residential" textOrder="9"/>
+
+				<filter tag="highway" value="service" textOrder="10"/>
+				<filter tag="highway" value="living_street" textOrder="10"/>
+				<filter tag="highway" value="pedestrian" textOrder="11"/>
+
+				<filter tag="highway" value="services" textOrder="10"/>
+				<filter tag="highway" value="ford" textOrder="10"/>
+				<filter tag="highway" value="construction" textOrder="9"/>
+				<filter tag="highway" value="proposed" textOrder="9"/>
+				<groupFilter textOnPath="true" nameTag="" >
+					<filter minzoom="14" maxzoom="14" textSize="12"/>
+					<filter minzoom="15" maxzoom="15" textSize="13"/>
+					<filter minzoom="16" maxzoom="16" textSize="14"/>
+					<filter minzoom="17" maxzoom="17" textSize="16"/>
+					<filter minzoom="18" textSize="18"/>
+				</groupFilter>
+			</group>
+
+			<group>
 				<filter tag="highway" value="track" textOrder="9"/>
 				<filter tag="highway" value="path" textOrder="9"/>
 				<filter tag="highway" value="byway" textOrder="9"/>
