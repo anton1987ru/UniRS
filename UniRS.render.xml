@@ -317,22 +317,43 @@
 		<!-- Disabling highway=ford (point) at zooms 13-14 -->
 		<filter minzoom="13" maxzoom="14" disable="true" tag="highway" value="ford"/>
 
-		<!-- Added support of noexit=yes -->
 		<filter minzoom="15" icon="highway_mini_roundabout" tag="noexit" value="yes"/>
+		<filter minzoom="16" icon="highway_crossing" tag="highway" value="crossing"/>
 
-		<!-- Added support of highway=crossing tag. Icon railway_level_crossing for now. -->
-		<filter minzoom="16" icon="railway_level_crossing" tag="highway" value="crossing"/>
+		<filter tag="traffic_calming" value="bump" icon="traffic_calming_bump" minzoom="17"/>
+		<filter appMode="car" tag="traffic_calming" value="bump" icon="traffic_calming_bump" minzoom="15"/>
+
+		<filter tag="amenity" value="parking">
+			<filter appMode="car" additional="access=private" icon="amenity_parking_private" minzoom="15"/>
+			<filter appMode="car" additional="access=no" icon="amenity_parking_private" minzoom="15"/>
+			<filter appMode="car" additional="fee=yes" icon="amenity_parking_paid" minzoom="15"/>
+			<filter appMode="car" icon="amenity_parking" minzoom="15"/>
+			<filter additional="access=private" icon="amenity_parking_private" minzoom="17"/>
+			<filter additional="access=no" icon="amenity_parking_private" minzoom="17"/>
+			<filter additional="fee=yes" icon="amenity_parking_paid" minzoom="17"/>
+			<filter minzoom="15" maxzoom="16" icon=""/>
+		</filter>
+		
+		<filter tag="man_made" value="tower" additional="tower:type=communication" icon="tower_type_communication" minzoom="15"/>
+		
+		<filter icon="amenity_place_of_worship" tag="amenity" value="place_of_worship" minzoom="16">
+			<filter additional="religion=christian" icon="religion_christian"/>
+			<filter additional="religion=jewish" icon="religion_jewish"/>
+			<filter additional="religion=muslim" icon="religion_muslim"/>
+			<filter additional="religion=sikh" icon="religion_sikh"/>
+		</filter>
+
 		<!-- Always show railway=level_crossing icon, not only in car mode -->
-			<filter minzoom="16" icon="railway_level_crossing" tag="railway" value="level_crossing"/>
+		<filter minzoom="16" icon="railway_level_crossing" tag="railway" value="level_crossing"/>
 
 		<!-- Added support of fixme, note, description, inscription tags -->
-		<group showNotes="true">
-		<filter icon="natural_volcano" tag="fixme" value=""/>		<!-- New icon is needed -->
+	<!--    <group showNotes="true">
+		<filter icon="natural_volcano" tag="fixme" value=""/>
 			<filter icon="tourism_information" tag="note" value=""/>
 			<filter icon="tourism_information" tag="description" value=""/>
 			<filter icon="tourism_information" tag="inscription" value=""/>
 			<groupFilter minzoom="14"/>
-		</group>
+		</group>    -->
 
 		<!-- Disabled barrier=gate and barrier=block at 15-16 zooms. Adding barrier=chain. -->
 		<filter minzoom="15" maxzoom="16" tag="barrier" value="gate" disable="true"/>
@@ -346,6 +367,7 @@
 			<groupFilter showAccess="true" additional="access=private" icon=""/>
 			<groupFilter showAccess="true" additional="access=no" icon=""/>
 		</group>
+
 
 		<!-- Less intrusive shops and foods section -->
 		<group lessIntrusiveShopsFood="true" minzoom="15" maxzoom="18" disable="true">
@@ -505,7 +527,6 @@
 				<filter nightMode="true" minzoom="10" color="#421c34" tag="landuse" value="allotments"/>
 				<filter nightMode="true" minzoom="12" color="#664b4d" tag="landuse" value="retail"/>
 				<filter nightMode="true" minzoom="14" color="#480544" tag="landuse" value="garages"/>
-				<filter nightMode="true" minzoom="10" color="#a0a23e3e" tag="landuse" value="military"/>
 				<filter nightMode="true" minzoom="8" color="#004333" color_2="#9DB487" strokeWidth_2=":1" tag="leisure" value="golf_course"/>
 				<filter nightMode="true" minzoom="12" color="#004333" color_2="#888888" strokeWidth_2=":1" tag="leisure" value="pitch"/>
 				<filter nightMode="true" minzoom="12" color="#b0004333" tag="leisure" value="recreation_ground"/>
@@ -537,7 +558,8 @@
 				<filter minzoom="10" color="#bde3cb" tag="landuse" value="allotments"/>
 				<filter minzoom="12" color="#feeaea" tag="landuse" value="retail"/>
 				<filter minzoom="14" color="#dfd1d6" tag="landuse" value="garages"/>
-				<filter minzoom="10" color="#a0ffa8a8" tag="landuse" value="military"/>
+<!--				<filter minzoom="10" color="#a0ffa8a8" tag="landuse" value="military"/>-->
+				<filter minzoom="10" shader="danger_night" color="#100000" color_2="#ddffa0c0" strokeWidth_2=":2" tag="landuse" value="military"/>
 				<filter minzoom="8" color="#b5e3b5" color_2="#9DB487" strokeWidth_2=":1" tag="leisure" value="golf_course"/>
 
 				<filter minzoom="12" color="#8ad3af" color_2="#888888" strokeWidth_2=":1" tag="leisure" value="pitch"/>
