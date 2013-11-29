@@ -542,7 +542,7 @@
 				<filter nightMode="true" minzoom="6" color="#183f28" shader="" tag="landuse" value="forest"/>
 
 
-				<filter tag="landuse" value="construction" color="#cac090" color_2="#666666" strokeWidth_2="0.5" pathEffect_2="12_5"/>
+				<filter tag="landuse" value="construction" color="#cac090" color_2="#666666" strokeWidth_2="0.5" pathEffect_2="8_4"/>
 				<filter minzoom="15" color="#f6eeb7" tag="amenity" value="bicycle_parking"/>
 				<filter minzoom="15" color="#f6eeb7" tag="amenity" value="parking"/>
 				<filter minzoom="11" color="#dfd1d6" tag="landuse" value="industrial"/>
@@ -558,7 +558,6 @@
 				<filter minzoom="10" color="#bde3cb" tag="landuse" value="allotments"/>
 				<filter minzoom="12" color="#feeaea" tag="landuse" value="retail"/>
 				<filter minzoom="14" color="#dfd1d6" tag="landuse" value="garages"/>
-<!--				<filter minzoom="10" color="#a0ffa8a8" tag="landuse" value="military"/>-->
 				<filter minzoom="10" shader="danger_night" color="#100000" color_2="#ddffa0c0" strokeWidth_2=":2" tag="landuse" value="military"/>
 				<filter minzoom="8" color="#b5e3b5" color_2="#9DB487" strokeWidth_2=":1" tag="leisure" value="golf_course"/>
 
@@ -712,6 +711,7 @@
 				<filter minzoom="14" color="#e2b36f" color_2="#a87a10" strokeWidth_2=":1"/>
 				<filter test="$hmRendered" minzoom="13" color="#e2b36f" color_2="#a87a10" strokeWidth_2=":1"/>
 			</groupFilter>
+			<groupFilter nightMode="true" color="#6b5432"/>
 		</group>
 
 		<!-- Tweaked colors of pedestrian and footway areas -->
@@ -723,6 +723,7 @@
 				<filter appMode="pedestrian" minzoom="13" color="#d1fcdd" color_2="#10ae00" strokeWidth_2=":1"/>
 				<filter minzoom="13" color="#ececec" color_2="#10ae00" strokeWidth_2=":1"/>
 			</groupFilter>
+			<groupFilter nightMode="true" color="#999999"/>
 		</group>
 
 		<!-- Added support of highway=raceway -->
@@ -822,13 +823,13 @@
 							<groupFilter nightMode="true" color_0="#ffffff"/>
 						</groupFilter>
 					</filter>
-	<!--				<groupFilter nightMode="true" color="#9F9F9F" shadowRadius=":3" shadowColor="#ffffff"/>  -->
+					<groupFilter nightMode="true" color="#999999" shadowRadius=":1.5" shadowColor="#cccccc"/>
 					<groupFilter additional="access=no" color_3="#00000000"/>
 					<groupFilter additional="access=private" color_3="#00000000"/>
 					<groupFilter layer="1" nightMode="true" shadowColor="#666666" shadowRadius="3"/>
 				</groupFilter>
 				<groupFilter tag="highway" value="road" color="#cccccc">
-					<filter nightMode="true" color="#cccccc"/>
+					<filter nightMode="true" color="#999999"/>
 				</groupFilter>
 			</group>
 
@@ -867,7 +868,7 @@
 				</groupFilter>
 				<groupFilter appMode="car" tag="highway" value="pedestrian" color="#F7D4D4" shadowRadius="2" shadowColor="#444444"/>
 				<groupFilter appMode="pedestrian" tag="highway" value="pedestrian" color="#d1fcdd"/>
-				<groupFilter nightMode="true" color="#b6b5b5"/>
+				<groupFilter nightMode="true" color="#999999"/>
 				<groupFilter appMode="pedestrian" nightMode="true" tag="highway" value="pedestrian" color="#b3d9bd"/>
 			</group>
 
