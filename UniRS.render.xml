@@ -198,10 +198,10 @@
 			<filter minzoom="18" textSize="15" textDy="7" textWrapWidth="20" tag="building" value="" textOrder="101"/>
 			<filter minzoom="18" textSize="15" textDy="-15" textWrapWidth="20" tag="addr:housenumber" value="" textOrder="102"/>
 			<groupFilter textColor="#000000" textHaloRadius="1"/>
-			<groupFilter nightMode="true" textColor="#444444" textHaloRadius="1"/>
+			<groupFilter nightMode="true" textColor="#ffffff" textHaloRadius="0"/>
 		</group>
-<!--		<filter minzoom="18" maxzoom="18" textSize="10" textColor="#444444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref"/>
-		<filter minzoom="19" textSize="10" textColor="#444444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref" nameTag2="addr:flats"/>  -->
+<!--		<filter minzoom="18" maxzoom="18" textSize="10" textColor="#ff4444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref"/>
+		<filter minzoom="19" textSize="10" textColor="#ff4444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref" nameTag2="addr:flats"/> -->
 
 		<!-- Outline added to some landuses fonts. Added support of some landuse names. -->
 		<group textSize="12" textColor="#444444" textHaloRadius="1" textDy="7" textWrapWidth="20">
@@ -512,8 +512,8 @@
 			<!-- Changed look of many landuses and amenities especially in night mode. Added 'access' support -->
 			<group noPolygons="false">
 				<filter nightMode="true" tag="landuse" value="construction" color="#3c3c1b" color_2="#aaaaaa" strokeWidth_2="0.5" pathEffect_2="12_5"/>
-				<filter nightMode="true" minzoom="15" color="#41536c" tag="amenity" value="bicycle_parking"/>
 				<filter nightMode="true" minzoom="15" color="#41536c" tag="amenity" value="parking"/>
+				<filter nightMode="true" minzoom="15" color="#41536c" tag="amenity" value="bicycle_parking"/>
 				<filter nightMode="true" minzoom="11" color="#19283d" tag="landuse" value="industrial"/>
 				<filter nightMode="true" minzoom="12" color="#19283d" tag="landuse" value="railway"/>
 				<filter nightMode="true" minzoom="12" color="#583741" tag="landuse" value="commercial"/>
@@ -597,6 +597,7 @@
 
 			<!-- 'access' section -->
 			<groupFilter showAccess="true">
+				<filter nightMode="true" tag="amenity" value="parking" additional="access=private" color="#41536c"/>
 				<filter tag="amenity" value="parking" additional="access=private" color="#feb3b3"/>
 				<filter tag="amenity" value="bicycle_parking" additional="access=private" color="#feb3b3"/>
 				<filter additional="access=private" color_2="#fc9595" cap_2="ROUND">
@@ -605,6 +606,7 @@
 					<filter minzoom="17" maxzoom="17" strokeWidth_2="6" pathEffect_2="5_13"/>
 					<filter minzoom="18" strokeWidth_2="8" pathEffect_2="6_15"/>
 				</filter>
+				<filter nightMode="true" tag="amenity" value="parking" additional="access=no" color="#41536c"/>
 				<filter tag="amenity" value="parking" additional="access=no" color="#feb3b3"/>
 				<filter tag="amenity" value="bicycle_parking" additional="access=no" color="#feb3b3"/>
 				<filter additional="access=no" color_2="#fc9595" cap_2="ROUND">
