@@ -433,7 +433,7 @@
 			<filter tag="amenity" value="post_office"/>
 		</group>
 
-		<filter appMode="car" tag="amenity" value="bicycle_parking" disable="true"/>
+		<filter appMode="car" minzoom="18" icon="amenity_bicycle_parking" tag="amenity" value="bicycle_parking"/>
 
 	</point>
 
