@@ -1,5 +1,5 @@
-<renderingStyle name="UniRS" depends="default" defaultColor="#f1eae4" version="1">
-<!-- Universal Rendering Style for OsmAnd by xmd5a (lornaderek@mail.ru) 04.11.2013 -->
+<renderingStyle name="UniRS" depends="default" defaultColor="#f1eae4" version="1.1">
+<!-- Universal Rendering Style for OsmAnd by xmd5a (lornaderek@mail.ru) 11.12.2013 -->
 
 	<renderingConstant name="hmRendered" value="true"/>
 	<renderingProperty attr="showSurfaces" name=" Road surfaces" description="Show road surfaces"
