@@ -3,59 +3,73 @@
 	<!-- currently  name tags are indexed with name and additional in nameTags separated by comma-->
 	
 	<!-- additional  -->
-	<type tag="oneway" value="yes" minzoom="15" additional="true"/>
-	<type tag="oneway" value="true" target_value="yes" minzoom="15" additional="true"/>
-	<type tag="oneway" value="no" minzoom="15" additional="true"/>
-	<type tag="oneway" value="false" target_value="no" minzoom="15" additional="true"/>
-	<type tag="oneway" value="-1" minzoom="15" additional="true"/>
-	<type tag="oneway" value="reverse" target_value="-1" minzoom="15" additional="true"/>
+	<type tag="oneway" value="yes" minzoom="15" additional="true" only_map="true"/>
+	<type tag="oneway" value="true" target_value="yes" minzoom="15" additional="true" only_map="true"/>
+	<type tag="oneway" value="no" minzoom="15" additional="true" only_map="true"/>
+	<type tag="oneway" value="false" target_value="no" minzoom="15" additional="true" only_map="true"/>
+	<type tag="oneway" value="-1" minzoom="15" additional="true" only_map="true"/>
+	<type tag="oneway" value="reverse" target_value="-1" minzoom="15" additional="true" only_map="true"/>
 
 	<type tag="service" value="driveway" minzoom="13" additional="true"/>
 	<type tag="service" value="parking_aisle" minzoom="13" additional="true"/>
 
-	<type tag="access" value="no" minzoom="15" additional="true"/>
-	<type tag="access" value="false" target_value="no" minzoom="15" additional="true"/>
-	<type tag="access" value="private" minzoom="15" additional="true"/>
-	<type tag="access" value="yes" minzoom="15" additional="true"/>
-	<type tag="access" value="true" target_value="yes" minzoom="15" additional="true"/>
-	<type tag="access" value="destination" minzoom="15" additional="true"/>
-<!--	<type tag="access" value="designated" minzoom="15" additional="true"/> -->
-	<type tag="access" value="permissive" minzoom="15" additional="true"/>
-	<type tag="access" value="agricultural" minzoom="15" additional="true"/>
-	<type tag="access" value="forestry" minzoom="15" additional="true"/>
-	<type tag="access" value="customers" minzoom="15" additional="true"/>
-	<type tag="access" value="delivery" minzoom="15" additional="true"/>
+	<type tag="access" value="no" minzoom="15" additional="true" only_map="true"/>
+	<type tag="access" value="false" target_value="no" minzoom="15" additional="true" only_map="true"/>
+	<type tag="access" value="private" minzoom="15" additional="true" only_map="true"/>
+	<type tag="access" value="yes" minzoom="15" additional="true" only_map="true"/>
+	<type tag="access" value="true" target_value="yes" minzoom="15" additional="true" only_map="true"/>
+	<type tag="access" value="destination" minzoom="15" additional="true" only_map="true"/>
+<!--	<type tag="access" value="designated" minzoom="15" additional="true" only_map="true"/> -->
+	<type tag="access" value="permissive" minzoom="15" additional="true" only_map="true"/>
+	<type tag="access" value="agricultural" minzoom="15" additional="true" only_map="true"/>
+	<type tag="access" value="forestry" minzoom="15" additional="true" only_map="true"/>
+	<type tag="access" value="customers" minzoom="15" additional="true" only_map="true"/>
+	<type tag="access" value="delivery" minzoom="15" additional="true" only_map="true"/>
+	<type tag="fee" value="yes" minzoom="15" additional="true"/>
+
+	<type tag="religion" value="christian" minzoom="15" additional="true"/>
+	<type tag="religion" value="jewish" minzoom="15" additional="true"/>
+	<type tag="religion" value="muslim" minzoom="15" additional="true"/>
+	<type tag="religion" value="sikh" minzoom="15" additional="true"/>
 	
-	<type tag="layer" value="0" minzoom="10" additional="true"/>
-	<type tag="layer" value="1" minzoom="10" additional="true"/>
-	<type tag="layer" value="-1" minzoom="10" additional="true"/>
-	<type tag="layer" value="+1" target_value="1" minzoom="10" additional="true"/>
-	<type tag="layer" value="2" target_value="1" minzoom="10" additional="true"/>
-	<type tag="layer" value="+2" target_value="1" minzoom="10" additional="true"/>
-	<type tag="layer" value="-2" target_value="-1" minzoom="10" additional="true"/>
-	<type tag="layer" value="3" target_value="1" minzoom="10" additional="true"/>
-	<type tag="layer" value="+3" target_value="1" minzoom="10" additional="true"/>
-	<type tag="layer" value="-3" target_value="-1" minzoom="10" additional="true"/>
-	<type tag="layer" value="4" target_value="1" minzoom="10" additional="true"/>
-	<type tag="layer" value="+4" target_value="1" minzoom="10" additional="true"/>
-	<type tag="layer" value="-4" target_value="-1" minzoom="10" additional="true"/>
-	<type tag="layer" value="5" target_value="1" minzoom="10" additional="true"/>
-	<type tag="layer" value="+5" target_value="1" minzoom="10" additional="true"/>
-	<type tag="layer" value="-5" target_value="-1" minzoom="10" additional="true"/>
-	<type tag="covered" value="yes" target_tag="layer" target_value="-1" minzoom="10" additional="true"/>
+	<type tag="layer" value="0" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="-1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="+1" target_value="1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="2" target_value="1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="+2" target_value="1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="-2" target_value="-1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="3" target_value="1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="+3" target_value="1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="-3" target_value="-1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="4" target_value="1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="+4" target_value="1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="-4" target_value="-1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="5" target_value="1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="+5" target_value="1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="layer" value="-5" target_value="-1" minzoom="10" additional="true" only_map="true"/>
+	<type tag="covered" value="yes" target_tag="layer" target_value="-1" minzoom="10" additional="true"
+		only_map="true"/>
+
+	<type tag="bridge" value="yes" minzoom="10" additional="true" only_map="true"/>
+	<type tag="tunnel" value="yes" minzoom="10" additional="true" only_map="true"/>
 	<type tag="tunnel" value="building_passage" target_tag="layer" target_value="-1" minzoom="10" additional="true"/>
 
-	<!--
-	<type tag="height" value="*" minzoom="15" additional="true"/>
-	<type tag="min_height" value="*" minzoom="15" additional="true"/>
-	<type tag="building:min_level" value="*" minzoom="15" additional="true"/>
-	<type tag="building:levels:aboveground" value="*" minzoom="15" additional="true"/>
-	<type tag="levels" value="*" minzoom="15" additional="true"/>
-	-->
-	
-	<type tag="bridge" value="yes" minzoom="10" additional="true"/>
-	<type tag="tunnel" value="yes" minzoom="10" additional="true"/>
 
+	<type tag="name" additional="text"/>
+	<type tag="name:en" additional="text"/>
+	<type tag="opening_hours" additional="text" only_poi="true"/>
+	<type tag="description" additional="text" only_poi="true"/>
+	<type tag="phone" additional="text" only_poi="true"/>
+	<type tag="contact:phone" target_tag="phone" additional="text" only_poi="true"/>
+	<type tag="website" additional="text" only_poi="true"/>
+
+	<type tag="height" minzoom="15" additional="true" only_poi="true"/>
+	<type tag="min_height" minzoom="15" additional="true" only_poi="true"/>
+	<type tag="building:min_level" minzoom="15" additional="true" only_poi="true"/>
+	<type tag="building:levels:aboveground" minzoom="15" additional="true" only_poi="true"/>
+	<type tag="levels" minzoom="15" additional="true" only_poi="true"/>
+	
 	<type tag="abandoned" value="yes" minzoom="16" additional="true"/>
 	<type tag="disused" value="yes" minzoom="16" additional="true"/>
 	<type tag="ruins" value="yes" minzoom="16" additional="true"/>
@@ -103,6 +117,7 @@
 		<type tag="highway" value="stop" minzoom="16" />
 		<type tag="highway" value="give_way" minzoom="16" />
 		<type tag="highway" value="traffic_signals" minzoom="16" />
+		<type tag="noexit" value="yes" minzoom="16"/>
 		<type tag="highway" value="motorway_junction" minzoom="13" nameTags="ref"/>
 		<type tag="highway" value="bus_stop" minzoom="15" poi_category="transportation"/>
 		<type tag="highway" value="platform" minzoom="15" poi_category="transportation"/>
@@ -111,8 +126,6 @@
 		<type tag="highway" value="speed_camera" minzoom="16" poi_category="transportation"/>
 		<type tag="highway" value="street_lamp" minzoom="16" />
 		<type tag="highway" value="crossing" minzoom="15"/>
-		<type tag="noexit" value="yes" minzoom="16"/>
-
 	</category>
 	
 	<category name="routes">
@@ -247,7 +260,7 @@
 
 	<category name="osmc">
 		<type tag="osmc_symbol_red"    nameTags="osmc_symbol_white_red_bar_name,osmc_symbol_red_white_bar_name"    value="" minzoom="12"/>
-		<type tag="osmc_symbol_yellow" nameTags="osmc_symbol_white_yellow_bar_name,osmc_symbol__yellow_diamond_name" value="" minzoom="12"/>
+		<type tag="osmc_symbol_yellow" nameTags="osmc_symbol_white_yellow_bar_name,osmc_symbol_yellow_diamond_name" value="" minzoom="12"/>
 		<type tag="osmc_symbol_green"  nameTags="osmc_symbol_white_green_bar_name,osmc_symbol_white_green_backslash_name"  value="" minzoom="12"/>
 		<type tag="osmc_symbol_blue"   nameTags="osmc_symbol_white_blue_bar_name"   value="" minzoom="12"/>
 		<type tag="osmc_symbol_black"   nameTags="osmc_symbol_white_black_bar_name"   value="" minzoom="12"/>
@@ -400,7 +413,7 @@
 		<type tag="aeroway" value="taxiway" minzoom="12" poi_prefix="aeroway_"/>
 		<type tag="aeroway" value="apron" minzoom="12" poi_prefix="aeroway_"/>
 		<type tag="aeroway" value="airport" minzoom="11" />
-		<type tag="aeroway" value="gate" minzoom="15" nameTags="ref" />
+		<type tag="aeroway" value="gate" minzoom="15" nameTags="ref" poi_prefix="aeroway_"/>
 		<type tag="aeroway" value="windsock" minzoom="15" />
 	</category>
 
@@ -453,6 +466,7 @@
 		<type tag="man_made" value="surveillance" minzoom="15" />
 		<type tag="man_made" value="survey_point" minzoom="15" />
 		<type tag="man_made" value="tower" minzoom="15" />
+		<type tag="tower:type" value="communication" additional="true" minzoom="15" />
 		<type tag="man_made" value="watermill" minzoom="15" />
 		<type tag="man_made" value="water_tower" minzoom="15" />
 		<type tag="man_made" value="water_well" minzoom="15" />
@@ -693,13 +707,14 @@
 		<type tag="natural" value="spring" minzoom="10" />
 		<type tag="natural" value="stone" minzoom="10" />
 		<type tag="natural" value="tree" minzoom="10" poi_category="" />
+		<type tag="natural" value="tree_row" minzoom="12" poi_category=""/>
 		<type tag="natural" value="water" minzoom="4" />
 		<type tag="natural" value="lake" minzoom="4" />
 		<type tag="natural" value="wetland" minzoom="6" />
 		<type tag="natural" value="wood" minzoom="6" />
 		<type tag="landuse" value="wood" minzoom="6"
+
 			target_tag="natural" target_value="wood" poi_category="natural" />
-		<type tag="natural" value="tree_row" minzoom="12" poi_category=""/>
 		<type tag="contour" value="elevation" minzoom="11" />
 	</category>
 	<category name="contourtype">
@@ -861,6 +876,7 @@
 		<type tag="boundary" value="maritime" minzoom="7" />
 		<type tag="boundary" value="national_park" minzoom="7" />
 		<type tag="boundary" value="protected_area" minzoom="7" />
+
 	</category>
 	
 	<category name="enforcement" poi_category="transportation" poi_prefix="enforcement_" relation="true" relationRole="to">

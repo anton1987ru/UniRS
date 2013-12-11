@@ -131,6 +131,7 @@
 					<filter minzoom="18" textSize="18"/>
 				</groupFilter>
 			</group>
+
 			<group>
 				<filter tag="highway" value="track" textOrder="9"/>
 				<filter tag="highway" value="path" textOrder="9"/>
@@ -197,10 +198,10 @@
 			<filter minzoom="18" textSize="15" textDy="7" textWrapWidth="20" tag="building" value="" textOrder="101"/>
 			<filter minzoom="18" textSize="15" textDy="-15" textWrapWidth="20" tag="addr:housenumber" value="" textOrder="102"/>
 			<groupFilter textColor="#000000" textHaloRadius="1"/>
-			<groupFilter nightMode="true" textColor="#444444" textHaloRadius="1"/>
+			<groupFilter nightMode="true" textColor="#ffffff" textHaloRadius="0"/>
 		</group>
-<!--		<filter minzoom="18" maxzoom="18" textSize="10" textColor="#444444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref"/>
-		<filter minzoom="19" textSize="10" textColor="#444444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref" nameTag2="addr:flats"/>  -->
+<!--		<filter minzoom="18" maxzoom="18" textSize="10" textColor="#ff4444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref"/>
+		<filter minzoom="19" textSize="10" textColor="#ff4444" textDy="7" textWrapWidth="20" tag="addr:flats" value="" textOrder="103" nameTag="ref" nameTag2="addr:flats"/> -->
 
 		<!-- Outline added to some landuses fonts. Added support of some landuse names. -->
 		<group textSize="12" textColor="#444444" textHaloRadius="1" textDy="7" textWrapWidth="20">
@@ -316,22 +317,43 @@
 		<!-- Disabling highway=ford (point) at zooms 13-14 -->
 		<filter minzoom="13" maxzoom="14" disable="true" tag="highway" value="ford"/>
 
-		<!-- Added support of noexit=yes -->
 		<filter minzoom="15" icon="highway_mini_roundabout" tag="noexit" value="yes"/>
+		<filter minzoom="16" icon="highway_crossing" tag="highway" value="crossing"/>
 
-		<!-- Added support of highway=crossing tag. Icon railway_level_crossing for now. -->
-		<filter minzoom="16" icon="railway_level_crossing" tag="highway" value="crossing"/>
+		<filter tag="traffic_calming" value="bump" icon="traffic_calming_bump" minzoom="17"/>
+		<filter appMode="car" tag="traffic_calming" value="bump" icon="traffic_calming_bump" minzoom="15"/>
+
+		<filter tag="amenity" value="parking">
+			<filter appMode="car" additional="access=private" icon="amenity_parking_private" minzoom="15"/>
+			<filter appMode="car" additional="access=no" icon="amenity_parking_private" minzoom="15"/>
+			<filter appMode="car" additional="fee=yes" icon="amenity_parking_paid" minzoom="15"/>
+			<filter appMode="car" icon="amenity_parking" minzoom="15"/>
+			<filter additional="access=private" icon="amenity_parking_private" minzoom="17"/>
+			<filter additional="access=no" icon="amenity_parking_private" minzoom="17"/>
+			<filter additional="fee=yes" icon="amenity_parking_paid" minzoom="17"/>
+			<filter minzoom="15" maxzoom="16" disable="true"/>
+		</filter>
+		
+		<filter tag="man_made" value="tower" additional="tower:type=communication" icon="tower_type_communication" minzoom="15"/>
+		
+		<filter icon="amenity_place_of_worship" tag="amenity" value="place_of_worship" minzoom="16">
+			<filter additional="religion=christian" icon="religion_christian"/>
+			<filter additional="religion=jewish" icon="religion_jewish"/>
+			<filter additional="religion=muslim" icon="religion_muslim"/>
+			<filter additional="religion=sikh" icon="religion_sikh"/>
+		</filter>
+
 		<!-- Always show railway=level_crossing icon, not only in car mode -->
-			<filter minzoom="16" icon="railway_level_crossing" tag="railway" value="level_crossing"/>
+		<filter minzoom="16" icon="railway_level_crossing" tag="railway" value="level_crossing"/>
 
 		<!-- Added support of fixme, note, description, inscription tags -->
-		<group showNotes="true">
-		<filter icon="natural_volcano" tag="fixme" value=""/>		<!-- New icon is needed -->
+	<!--    <group showNotes="true">
+		<filter icon="natural_volcano" tag="fixme" value=""/>
 			<filter icon="tourism_information" tag="note" value=""/>
 			<filter icon="tourism_information" tag="description" value=""/>
 			<filter icon="tourism_information" tag="inscription" value=""/>
 			<groupFilter minzoom="14"/>
-		</group>
+		</group>    -->
 
 		<!-- Disabled barrier=gate and barrier=block at 15-16 zooms. Adding barrier=chain. -->
 		<filter minzoom="15" maxzoom="16" tag="barrier" value="gate" disable="true"/>
@@ -345,6 +367,7 @@
 			<groupFilter showAccess="true" additional="access=private" icon=""/>
 			<groupFilter showAccess="true" additional="access=no" icon=""/>
 		</group>
+
 
 		<!-- Less intrusive shops and foods section -->
 		<group lessIntrusiveShopsFood="true" minzoom="15" maxzoom="18" disable="true">
@@ -409,6 +432,9 @@
 			<filter tag="amenity" value="post_box"/>
 			<filter tag="amenity" value="post_office"/>
 		</group>
+
+		<filter appMode="car" minzoom="18" icon="amenity_bicycle_parking" tag="amenity" value="bicycle_parking"/>
+
 	</point>
 
 
@@ -489,8 +515,9 @@
 			<!-- Changed look of many landuses and amenities especially in night mode. Added 'access' support -->
 			<group noPolygons="false">
 				<filter nightMode="true" tag="landuse" value="construction" color="#3c3c1b" color_2="#aaaaaa" strokeWidth_2="0.5" pathEffect_2="12_5"/>
-				<filter nightMode="true" minzoom="15" color="#41536c" tag="amenity" value="bicycle_parking"/>
 				<filter nightMode="true" minzoom="15" color="#41536c" tag="amenity" value="parking"/>
+				<filter nightMode="true" appMode="car" tag="amenity" value="bicycle_parking" disable="true"/>
+				<filter nightMode="true" minzoom="15" color="#41536c" tag="amenity" value="bicycle_parking"/>
 				<filter nightMode="true" minzoom="11" color="#19283d" tag="landuse" value="industrial"/>
 				<filter nightMode="true" minzoom="12" color="#19283d" tag="landuse" value="railway"/>
 				<filter nightMode="true" minzoom="12" color="#583741" tag="landuse" value="commercial"/>
@@ -504,7 +531,6 @@
 				<filter nightMode="true" minzoom="10" color="#421c34" tag="landuse" value="allotments"/>
 				<filter nightMode="true" minzoom="12" color="#664b4d" tag="landuse" value="retail"/>
 				<filter nightMode="true" minzoom="14" color="#480544" tag="landuse" value="garages"/>
-				<filter nightMode="true" minzoom="10" color="#a0a23e3e" tag="landuse" value="military"/>
 				<filter nightMode="true" minzoom="8" color="#004333" color_2="#9DB487" strokeWidth_2=":1" tag="leisure" value="golf_course"/>
 				<filter nightMode="true" minzoom="12" color="#004333" color_2="#888888" strokeWidth_2=":1" tag="leisure" value="pitch"/>
 				<filter nightMode="true" minzoom="12" color="#b0004333" tag="leisure" value="recreation_ground"/>
@@ -520,7 +546,10 @@
 				<filter nightMode="true" minzoom="6" color="#183f28" shader="" tag="landuse" value="forest"/>
 
 
-				<filter tag="landuse" value="construction" color="#cac090" color_2="#666666" strokeWidth_2="0.5" pathEffect_2="12_5"/>
+				<filter minzoom="13" tag="landuse" value="construction" color="#cac090" color_2="#666666" strokeWidth_2="0.5" pathEffect_2="8_4"/>
+				<filter tag="amenity" value="library" disable="true"/>
+				<filter tag="amenity" value="cinema" disable="true"/>
+				<filter appMode="car" tag="amenity" value="bicycle_parking" disable="true"/>
 				<filter minzoom="15" color="#f6eeb7" tag="amenity" value="bicycle_parking"/>
 				<filter minzoom="15" color="#f6eeb7" tag="amenity" value="parking"/>
 				<filter minzoom="11" color="#dfd1d6" tag="landuse" value="industrial"/>
@@ -536,7 +565,6 @@
 				<filter minzoom="10" color="#bde3cb" tag="landuse" value="allotments"/>
 				<filter minzoom="12" color="#feeaea" tag="landuse" value="retail"/>
 				<filter minzoom="14" color="#dfd1d6" tag="landuse" value="garages"/>
-				<filter minzoom="10" color="#a0ffa8a8" tag="landuse" value="military"/>
 				<filter minzoom="8" color="#b5e3b5" color_2="#9DB487" strokeWidth_2=":1" tag="leisure" value="golf_course"/>
 
 				<filter minzoom="12" color="#8ad3af" color_2="#888888" strokeWidth_2=":1" tag="leisure" value="pitch"/>
@@ -576,6 +604,7 @@
 
 			<!-- 'access' section -->
 			<groupFilter showAccess="true">
+				<filter nightMode="true" tag="amenity" value="parking" additional="access=private" color="#41536c"/>
 				<filter tag="amenity" value="parking" additional="access=private" color="#feb3b3"/>
 				<filter tag="amenity" value="bicycle_parking" additional="access=private" color="#feb3b3"/>
 				<filter additional="access=private" color_2="#fc9595" cap_2="ROUND">
@@ -584,6 +613,7 @@
 					<filter minzoom="17" maxzoom="17" strokeWidth_2="6" pathEffect_2="5_13"/>
 					<filter minzoom="18" strokeWidth_2="8" pathEffect_2="6_15"/>
 				</filter>
+				<filter nightMode="true" tag="amenity" value="parking" additional="access=no" color="#41536c"/>
 				<filter tag="amenity" value="parking" additional="access=no" color="#feb3b3"/>
 				<filter tag="amenity" value="bicycle_parking" additional="access=no" color="#feb3b3"/>
 				<filter additional="access=no" color_2="#fc9595" cap_2="ROUND">
@@ -689,6 +719,7 @@
 				<filter minzoom="14" color="#e2b36f" color_2="#a87a10" strokeWidth_2=":1"/>
 				<filter test="$hmRendered" minzoom="13" color="#e2b36f" color_2="#a87a10" strokeWidth_2=":1"/>
 			</groupFilter>
+			<groupFilter nightMode="true" color="#6b5432"/>
 		</group>
 
 		<!-- Tweaked colors of pedestrian and footway areas -->
@@ -700,6 +731,8 @@
 				<filter appMode="pedestrian" minzoom="13" color="#d1fcdd" color_2="#10ae00" strokeWidth_2=":1"/>
 				<filter minzoom="13" color="#ececec" color_2="#10ae00" strokeWidth_2=":1"/>
 			</groupFilter>
+			<groupFilter nightMode="true" color="#999999"/>
+			<groupFilter nightMode="true" appMode="car" color="#25999999"/>
 		</group>
 
 		<!-- Added support of highway=raceway -->
@@ -799,13 +832,13 @@
 							<groupFilter nightMode="true" color_0="#ffffff"/>
 						</groupFilter>
 					</filter>
-	<!--				<groupFilter nightMode="true" color="#9F9F9F" shadowRadius=":3" shadowColor="#ffffff"/>  -->
+					<groupFilter nightMode="true" color="#999999" shadowRadius=":1.5" shadowColor="#cccccc"/>
 					<groupFilter additional="access=no" color_3="#00000000"/>
 					<groupFilter additional="access=private" color_3="#00000000"/>
 					<groupFilter layer="1" nightMode="true" shadowColor="#666666" shadowRadius="3"/>
 				</groupFilter>
 				<groupFilter tag="highway" value="road" color="#cccccc">
-					<filter nightMode="true" color="#cccccc"/>
+					<filter nightMode="true" color="#999999"/>
 				</groupFilter>
 			</group>
 
@@ -844,7 +877,8 @@
 				</groupFilter>
 				<groupFilter appMode="car" tag="highway" value="pedestrian" color="#F7D4D4" shadowRadius="2" shadowColor="#444444"/>
 				<groupFilter appMode="pedestrian" tag="highway" value="pedestrian" color="#d1fcdd"/>
-				<groupFilter nightMode="true" color="#b6b5b5"/>
+				<groupFilter nightMode="true" color="#999999"/>
+				<groupFilter appMode="car" nightMode="true" tag="highway" value="pedestrian" color="#25999999"/>
 				<groupFilter appMode="pedestrian" nightMode="true" tag="highway" value="pedestrian" color="#b3d9bd"/>
 			</group>
 
@@ -958,6 +992,11 @@
 			<groupFilter minzoom="17" maxzoom="17" strokeWidth_2="7" strokeWidth_3="7"/>
 			<groupFilter minzoom="18" maxzoom="18" strokeWidth_2="9" strokeWidth_3="9"/>
 			<groupFilter minzoom="19" strokeWidth_2="11" strokeWidth_3="11"/>
+			<groupFilter appMode="car">
+				<filter tag="highway" value="pedestrian" color_2="#00000000" color_3="#00000000"/>
+				<filter tag="highway" value="footway" color_2="#00000000" color_3="#00000000"/>
+				<filter tag="highway" value="bicycle" color_2="#00000000" color_3="#00000000"/>
+			</groupFilter>
 		</group>
 
 		<!-- Changing look of proposed and construction highways -->
@@ -998,10 +1037,12 @@
 			</groupFilter>
 
 			<!-- Footways redesigned -->
-			<filter tag="highway" value="footway" color="#0033FF" pathEffect="3.5_1.5">
-				<filter appMode="car" minzoom="13" maxzoom="15" disable="yes"/>
+			<filter tag="highway" value="footway" color="#0033ff" pathEffect="3.5_1.5">
+				<filter appMode="car" minzoom="13" maxzoom="15" disable="true"/>
+				<filter appMode="car" minzoom="16" color="#250033ff" strokeWidth="1.5"/>
 				<filter minzoom="13" strokeWidth="1"/>
 				<groupFilter nightMode="true" color="#ff9600"/>
+				<groupFilter nightMode="true" appMode="car" color="#25ff9600"/>
 			</filter>
 
 			<!-- Cycleways redesigned -->
@@ -1009,6 +1050,7 @@
 				<filter appMode="bicycle" minzoom="12" maxzoom="13" strokeWidth="3"/>
 				<filter appMode="bicycle" minzoom="14" strokeWidth="4"/>
 				<filter appMode="car" minzoom="13" maxzoom="15" disable="yes"/>
+				<filter appMode="car" color="#33a85bff" strokeWidth="1.5"/>
 				<filter test="$hmRendered" lessDetails="true" minzoom="12" maxzoom="12" disable="true"/>
 				<filter test="$hmRendered" minzoom="12" maxzoom="12" strokeWidth="1"/>
 				<filter test="$hmRendered" minzoom="13" maxzoom="13" strokeWidth="1.5"/>
@@ -1038,11 +1080,14 @@
 				<filter appMode="pedestrian" test="$hmRendered" minzoom="14" maxzoom="15" strokeWidth="5"/>
 				<filter appMode="pedestrian" minzoom="16" maxzoom="17" strokeWidth="6"/>
 				<filter appMode="pedestrian" minzoom="18" strokeWidth="8"/>
-				<filter appMode="car" minzoom="13" maxzoom="15" color="#00000000"/>
+				<filter appMode="car" minzoom="13" maxzoom="15" disable="true"/>
+				<filter appMode="car" minzoom="16" maxzoom="17" color="#250000ff" strokeWidth="5"/>
+				<filter appMode="car" minzoom="18" color="#250000ff" strokeWidth="7"/>
 				<filter minzoom="14" maxzoom="15" strokeWidth="4"/>
 				<filter minzoom="16" maxzoom="17" strokeWidth="5"/>
 				<filter minzoom="18" strokeWidth="7"/>
 				<groupFilter nightMode="true" color="#ff9600"/>
+				<groupFilter nightMode="true" appMode="car" color="#25ff9600"/>
 			</filter>
 
 			<!-- Surface grade section for highway=track,footway,cycleway,path -->
@@ -1152,14 +1197,40 @@
 			<groupFilter minzoom="18" strokeWidth_0="10" strokeWidth__1="10"/>
 			<!-- Bridges modified to fix interference with surface,surface grade, access. Night color tweaked. -->
 			<groupFilter layer="1">
-				<filter nightMode="true" minzoom="14" color__1="#ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#000000" pathEffect_0="" strokeWidth_0="8"/>
+				<filter nightMode="true">
+					<filter appMode="car">
+						<filter tag="highway" value="highway" minzoom="16" color__1="#25ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#55000000" pathEffect_0="" strokeWidth_0="8"/>
+						<filter tag="highway" value="steps" minzoom="16" color__1="#25ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#55000000" pathEffect_0="" strokeWidth_0="8"/>
+					</filter>
+					<filter minzoom="14" color__1="#ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#000000" pathEffect_0="" strokeWidth_0="8"/>
+				</filter>
+				<filter appMode="car">
+					<filter tag="highway" value="footway" color__1="#25000000" strokeWidth__1="8" pathEffect__1="" color_0="#55ffffff" pathEffect_0="" strokeWidth_0="6"/>
+					<filter tag="highway" value="steps" color__1="#25000000" strokeWidth__1="8" pathEffect__1="" color_0="#55ffffff" pathEffect_0="" strokeWidth_0="6"/>
+				</filter>
 				<filter color__1="#000000" strokeWidth__1="8" pathEffect__1="" color_0="#ffffff" pathEffect_0="" strokeWidth_0="6"/>
 			</groupFilter>
 			<!-- Tunnels modified to fix interference with surface,surface grade, access. Night color tweaked. -->
 			<groupFilter layer="-1">
-				<filter nightMode="true" minzoom="14" color__1="#ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#000000" strokeWidth_0="5" pathEffect_0=""/>
+				<filter nightMode="true">
+					<filter appMode="car">
+						<filter tag="highway" value="footway" minzoom="16" color__1="#25ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#55000000" strokeWidth_0="5" pathEffect_0=""/>
+						<filter tag="highway" value="steps" minzoom="16" color__1="#25ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#55000000" strokeWidth_0="5" pathEffect_0=""/>
+					</filter>
+					<filter minzoom="14" color__1="#ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#000000" strokeWidth_0="5" pathEffect_0=""/>
+				</filter>
+				<filter appMode="car">
+					<filter tag="highway" value="footway" minzoom="16" color__1="#25000000" strokeWidth__1="8.5" pathEffect__1="6_4" color_0="#55ffffff" strokeWidth_0="6" pathEffect_0=""/>
+					<filter tag="highway" value="steps" minzoom="16" color__1="#25000000" strokeWidth__1="8.5" pathEffect__1="6_4" color_0="#55ffffff" strokeWidth_0="6" pathEffect_0=""/>
+				</filter>
 				<filter color__1="#000000" strokeWidth__1="8.5" pathEffect__1="6_4" color_0="#ffffff" strokeWidth_0="6" pathEffect_0=""/>
 			</groupFilter>
+<!--			<groupFilter layer="-1">
+				<filter nightMode="true" appMode="car" tag="highway" value="footway" minzoom="16" color__1="#33ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#33000000" strokeWidth_0="5" pathEffect_0=""/>
+				<filter nightMode="true" appMode="car" tag="highway" value="steps" minzoom="16" color__1="#33ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#33000000" strokeWidth_0="5" pathEffect_0=""/>
+				<filter nightMode="true" minzoom="14" color__1="#ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#000000" strokeWidth_0="5" pathEffect_0=""/>
+				<filter color__1="#000000" strokeWidth__1="8.5" pathEffect__1="6_4" color_0="#ffffff" strokeWidth_0="6" pathEffect_0=""/>
+			</groupFilter>    -->
 
 			<!-- Adding shadows to highway=track,footway,cycleway,path in 'noPolygons' mode for better visibility -->
 			<groupFilter noPolygons="true" shadowRadius=":1" shadowColor="#999999"/>
@@ -1234,7 +1305,7 @@
 				<filter tag="waterway" value="ditch"/>
 				<filter tag="waterway" value="drain"/>
 				<groupFilter>
-					<filter layer="-1" minzoom="15" strokeWidth="3" color_2="#ffffff" strokeWidth_2="1" pathEffect_2="4_2"/>
+					<filter layer="-1" minzoom="15" strokeWidth="3" color_2="#44ffffff" strokeWidth_2="1" pathEffect_2="4_2"/>
 					<filter minzoom="13" maxzoom="14" strokeWidth="1"/>
 					<filter minzoom="15" strokeWidth="3"/>
 				</groupFilter>
@@ -1242,10 +1313,43 @@
 			<groupFilter color="#41cad3" color_2="#ffffff">
 				<filter nightMode="true" color="#330099" color_2="#7340D9"/>
 			</groupFilter>
+			<groupFilter layer="-1" color="#4441cad3" color_2="#44ffffff">
+				<filter nightMode="true" color="#44330099" color_2="#447340D9"/>
+			</groupFilter>
 		</group>
 
 		<!-- waterway=dam is black now -->
 		<filter tag="waterway" color="#000000" value="dam" minzoom="13" strokeWidth="2"/>
+
+		<!-- Railways -->
+		<filter tag="railway" value="rail" color="#999999">
+			<filter appMode="car" layer="-1" minzoom="9" maxzoom="13" disable="true"/>
+			<filter appMode="bicycle" layer="-1" minzoom="9" maxzoom="13" disable="true"/>
+			<filter layer="-1" minzoom="9" maxzoom="13" strokeWidth="1:1" pathEffect="5_2"/>
+			<filter appMode="car" layer="-1" minzoom="14" strokeWidth="1:2" color="#25999999" color_2="#25ffffff" strokeWidth_2="1:2" pathEffect_2="4_4"/>
+			<filter appMode="bicycle" layer="-1" minzoom="14" strokeWidth="1:2" color="#25999999" color_2="#25ffffff" strokeWidth_2="1:2" pathEffect_2="4_4"/>
+			<filter layer="-1" minzoom="14" strokeWidth="1:2" color_2="#ffffff" strokeWidth_2="1:2" pathEffect_2="4_4"/>
+			<filter layer="1" minzoom="14" color="#000000" strokeWidth="5" color_2="#ffffff" strokeWidth_2="4" color_3="#999999" strokeWidth_3="1" pathEffect_3="12_8_1_0"/>
+			<filter minzoom="7" maxzoom="7" strokeWidth="1"/>
+			<filter minzoom="8" maxzoom="8" strokeWidth="1.5"/>
+			<filter minzoom="9" maxzoom="12" strokeWidth="1:1"/>
+			<filter minzoom="13" maxzoom="13" strokeWidth="1:2" color_2="#ffffff" strokeWidth_2="1" pathEffect_2="8_12"/>
+			<filter minzoom="14" strokeWidth="1:2" color_2="#ffffff" strokeWidth_2="1" pathEffect_2="0_11_8_1"/>
+		</filter>
+		<filter tag="railway" value="tram" color="#444444">
+			<filter appMode="car" layer="-1" minzoom="13" maxzoom="14" disable="true"/>
+			<filter appMode="bicycle" layer="-1" minzoom="13" maxzoom="14" disable="true"/>
+			<filter layer="-1" minzoom="13" maxzoom="14" strokeWidth="1" pathEffect="5_3"/>
+			<filter appMode="car" layer="-1" minzoom="15" color="#25444444" strokeWidth="2" pathEffect="5_3"/>
+			<filter appMode="bicycle" layer="-1" minzoom="15" color="#25444444" strokeWidth="2" pathEffect="5_3"/>
+			<filter layer="-1" minzoom="15" strokeWidth="2" pathEffect="5_3"/>
+			<filter minzoom="13" maxzoom="14" strokeWidth="1"/>
+			<filter minzoom="15" strokeWidth="1:1"/>
+		</filter>
+		<filter appMode="car" layer="-1" tag="railway" value="subway" minzoom="13" color="#25999999" strokeWidth="2" pathEffect="5_3"/>
+		<filter appMode="bicycle" layer="-1" tag="railway" value="subway" minzoom="13" color="#25999999" strokeWidth="2" pathEffect="5_3"/>
+		<filter appMode="car" layer="-1" tag="railway" value="light_rail" minzoom="13" color="#25666666" strokeWidth="1:1" pathEffect="5_3"/>
+		<filter appMode="bicycle" layer="-1" tag="railway" value="light_rail" minzoom="13" color="#25666666" strokeWidth="1:1" pathEffect="5_3"/>
 
 		<!-- Railway and other transport platforms that have layer=-1 are dotted now -->
 		<group>
@@ -1254,7 +1358,11 @@
 			<groupFilter color="#888888" strokeWidth="4" strokeWidth_2="2" color_2="#bababa" minzoom="16">
 				<filter minzoom="18" strokeWidth="6" strokeWidth_2="4"/>
 			</groupFilter>
-			<groupFilter layer="-1" color="#44888888" color_2="#bababa" pathEffect="15_4" pathEffect_2="15_4"/>
+			<groupFilter layer="-1" color="#44888888" color_2="#44bababa" pathEffect="15_4" pathEffect_2="15_4"/>
+			<groupFilter appMode="car" layer="-1" color="#25888888" color_2="#25bababa" pathEffect="15_4" pathEffect_2="15_4"/>
+			<groupFilter appMode="car" nightMode="true" layer="-1" color="#10888888" color_2="#10bababa" pathEffect="15_4" pathEffect_2="15_4"/>
+			<groupFilter appMode="bicycle" layer="-1" color="#25888888" color_2="#25bababa" pathEffect="15_4" pathEffect_2="15_4"/>
+			<groupFilter appMode="bicycle" nightMode="true" layer="-1" color="#10888888" color_2="#10bababa" pathEffect="15_4" pathEffect_2="15_4"/>
 		</group>
 
 		<!-- Added support of man_made=cutline tag -->
