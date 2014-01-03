@@ -1392,7 +1392,7 @@
 
 		<!-- Added support of man_made=cutline tag -->
 		<group>
-			<filter noPolygons="false" tag="man_made" value="cutline" minzoom="12" color="#f1eae4">
+			<filter noPolygons="false" tag="man_made" value="cutline" minzoom="12" color="#c4dcbb">
 				<filter lessDetails="false" minzoom="12" maxzoom="12" strokeWidth="1"/>
 				<filter lessDetails="false" minzoom="13" maxzoom="13" strokeWidth="1.5"/>
 				<filter minzoom="14" maxzoom="14" strokeWidth="2.5"/>
