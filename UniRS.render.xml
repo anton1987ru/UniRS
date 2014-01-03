@@ -872,8 +872,10 @@
 					<groupFilter lessDetails="true" minzoom="13" maxzoom="13" disable="true"/>
 					<groupFilter lessDetails="true" additional="service=driveway" minzoom="14" maxzoom="14" disable="true"/>
 					<groupFilter lessDetails="true" additional="service=parking_aisle" minzoom="14" maxzoom="14" disable="true"/>
+					<groupFilter lessDetails="true" additional="service=alley" minzoom="14" maxzoom="14" disable="true"/>
 					<groupFilter additional="service=driveway" minzoom="13" maxzoom="13" disable="true"/>
 					<groupFilter additional="service=parking_aisle" minzoom="13" maxzoom="13" disable="true"/>
+					<groupFilter additional="service=alley" minzoom="13" maxzoom="13" disable="true"/>
 					<groupFilter additional="access=no" color_3="#00000000"/>
 					<groupFilter additional="access=private" color_3="#00000000"/>
 				</groupFilter>
