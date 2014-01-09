@@ -12,6 +12,7 @@
 
 	<type tag="service" value="driveway" minzoom="13" additional="true"/>
 	<type tag="service" value="parking_aisle" minzoom="13" additional="true"/>
+	<type tag="service" value="alley" minzoom="13" additional="true"/>
 
 	<type tag="access" value="no" minzoom="15" additional="true" only_map="true"/>
 	<type tag="access" value="false" target_value="no" minzoom="15" additional="true" only_map="true"/>
