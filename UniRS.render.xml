@@ -57,7 +57,6 @@
 			<filter tag="inscription" value=""/>
 			<groupFilter textSize="10" minzoom="16" textColor="#000000" textHaloRadius="1" textDy="7"/>
 		</group> -->
-<!--			<filter minzoom="18" textColor="#ff0000" textSize="8" textDy="-7" tag="entrance" value="yes" nameTag="addr:flats" textOrder="101"/>   -->
 
 		<group showCycleRoutes="true">
 			<filter appMode="bicycle" tag="lcn_network" value="lcn" nameTag="lcn_ref" textMinDistance="150" textColor="#0000ff" textOrder="9"/>
@@ -202,8 +201,8 @@
 		</group>
 		<filter minzoom="18" maxzoom="18" tag="addr:flats" value="" textSize="10" textColor="#2f4154" textHaloRadius="1" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref"/>
 		<filter minzoom="19" textSize="10" tag="addr:flats" value="" textColor="#2f4154" textHaloRadius="1" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref" nameTag2="addr:flats"/>
-		<filter nightMode="true" minzoom="18" maxzoom="18" tag="addr:flats" value="" textSize="10" textColor="#cae4ff" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref"/>
-		<filter nightMode="true" minzoom="19" textSize="10" tag="addr:flats" value="" textColor="#cae4ff" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref" nameTag2="addr:flats"/>
+		<filter nightMode="true" minzoom="18" maxzoom="18" tag="addr:flats" value="" textSize="10" textColor="#cae4ff"  textHaloColor="#777777" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref"/>
+		<filter nightMode="true" minzoom="19" textSize="10" tag="addr:flats" value="" textColor="#cae4ff"  textHaloColor="#777777" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref" nameTag2="addr:flats"/>
 
 		<!-- Outline added to some landuses fonts. Added support of some landuse names. -->
 		<group textSize="12" textColor="#444444" textHaloRadius="1" textDy="7" textWrapWidth="20">
@@ -213,6 +212,7 @@
 			<!-- landuse=residential and landuse=railway texts added (were absent) -->
 			<filter minzoom="13" tag="landuse" value="residential"/>
 			<filter minzoom="13" tag="landuse" value="railway"/>
+			<groupFilter nightMode="true" textColor="#d7d7d7" textHaloColor="#777777"/>
 		</group>
 
 			<filter minzoom="16" maxzoom="17" textSize="10" textColor="#444444" textHaloRadius="1" textDy="-2" tag="man_made" value="cutline" textOnPath="true"/>
@@ -239,6 +239,7 @@
 			<filter minzoom="13" textSize="12" textColor="#000000" textWrapWidth="15" tag="natural" value="wood" textOrder="10"/>
 			<filter minzoom="15" textSize="12" textColor="#09dd09" textWrapWidth="15" tag="natural" value="park" textOrder="10"/>
 			<filter minzoom="14" textSize="12" textColor="#6699cc" textWrapWidth="20" tag="natural" value="beach" textOrder="10"/>
+			<groupFilter nightMode="true" textHaloColor="#cccccc"/>
 		</group>
 
 		<!-- Disabling landuse=military text on zooms 12-14 -->
@@ -301,7 +302,7 @@
 		</group>
 
 		<!-- Less intrusive banks, health and post section -->
-		<group lessIntrusiveBankHealthPost="true" minzoom="15" maxzoom="18" disable="true">
+		<group lessIntrusiveBanksHealthPost="true" minzoom="15" maxzoom="18" disable="true">
 			<filter tag="amenity" value="atm"/>
 			<filter tag="amenity" value="bank"/>
 			<filter tag="amenity" value="pharmacy"/>
@@ -586,7 +587,7 @@
 					<filter minzoom="6" maxzoom="12" color="#8dc56c" tag="landuse" value="forest"/>
 					<filter minzoom="13" shader="forest" tag="landuse" value="forest"/>
 				</group>
-				<!-- Changed look of leisure=track (never liked mapnik-style)-->
+				<!-- Changed look of leisure=track -->
 				<group>
 					<filter tag="leisure" value="track"/>
 					<groupFilter color="#6674dcba" color_2="#74dcba" shadowRadius="5" shadowColor="#ff0000">
