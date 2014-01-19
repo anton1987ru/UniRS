@@ -75,12 +75,11 @@
 			</groupFilter>
 		</group>
 
-		<!-- landuse=garages,industrial and commercial now have black fonts in night mode -->
 		<group>
 			<filter tag="landuse" value="garages"/>
 			<filter tag="landuse" value="industrial"/>
 			<filter tag="landuse" value="commercial"/>
-			<groupFilter nightMode="true" textColor="#000000"/>
+			<groupFilter nightMode="true" textColor="#ffffff"/>
 		</group>
 
 	<!-- Highway fonts are bold and outlined now -->
@@ -159,16 +158,16 @@
 			<filter minzoom="6" textSize="20" textBold="true" textDy="1" tag="place" value="city" textOrder="4"/>
 			<filter minzoom="6" textSize="16" textBold="true" textDy="1" tag="place" value="town" textOrder="5"/>
 			<filter minzoom="11" textSize="14" tag="place" value="village" textOrder="10"/>
-			<groupFilter nightMode="true" textColor="#444444"/>
+			<groupFilter nightMode="true" textColor="#ffffff" textHaloColor="#777777"/>
 		</group>
 		<group textColor="#000000" textWrapWidth="20" textHaloRadius="1">
 			<filter minzoom="11" textSize="13" tag="place" value="hamlet" textOrder="12"/>
 			<filter minzoom="11" textSize="14" tag="place" value="suburb" textOrder="12"/>
 			<filter minzoom="11" textSize="13" tag="place" value="locality" textColor="#868686" textOrder="15"/>
 			<filter minzoom="11" textSize="14" tag="place" value="island" textOrder="10"/>
-			<groupFilter nightMode="true" textColor="#444444"/>
+			<groupFilter nightMode="true" textColor="#ffffff" textHaloColor="#777777"/>
+			<groupFilter nightMode="true" tag="place" value="locality" textColor="#aaaaaa" textHaloColor="#555555"/>
 		</group>
-
 
 		<!-- Outline added to water fonts. Also textColor changed to be more contrast. -->
 		<group textColor="#193c5f" textHaloRadius="1">
@@ -188,6 +187,7 @@
 
 			<filter minzoom="3" textSize="14" textColor="#9d6c9d" textWrapWidth="35" tag="ferry_route" value="ferry" nameTag="ferry_route_ref"/>
 			<filter minzoom="14" textSize="12" textColor="#0000ff" textWrapWidth="30" tag="leisure" value="marina"/>
+			<groupFilter nightMode="true" textColor="#90e4ff" textHaloColor="#003153"/>
 		</group>
 
 		<!-- Outline added to building names and housenumber fonts. Also color changed to be more contrast -->
@@ -219,8 +219,8 @@
 			<filter minzoom="16" maxzoom="17" textSize="10" textColor="#444444" textHaloRadius="1" textDy="-2" tag="natural" value="tree_row" textOnPath="true"/>
 			<filter minzoom="18" textSize="12" textColor="#444444" textHaloRadius="1" textDy="-1" tag="natural" value="tree_row" textOnPath="true"/>
 
-		<!-- Outline added to some landuses fonts -->
-		<group textSize="12" textColor="#000000" textHaloRadius="1" textDy="7" textWrapWidth="20">
+		<!-- Outline added to some amenities fonts, colors changed -->
+		<group textSize="12" textColor="#493a00" textHaloRadius="1" textHaloColor="#fff8db" textDy="7" textWrapWidth="20">
 			<filter minzoom="15" tag="amenity" value="place_of_worship"/>
 			<filter minzoom="17" tag="amenity" value="embassy"/>
 			<filter minzoom="16" tag="amenity" value="townhall"/>
@@ -231,6 +231,7 @@
 			<filter minzoom="16" tag="amenity" value="kindergarten"/>
 			<filter minzoom="16" tag="amenity" value="school"/>
 			<filter minzoom="16" tag="amenity" value="college"/>
+			<groupFilter nightMode="true" textColor="#ece0b1" textHaloColor="#777777"/>
 		</group>
 
 		<!-- Outline added to some 'natural' tags fonts -->
@@ -1044,8 +1045,8 @@
 				<filter appMode="car" minzoom="13" maxzoom="15" disable="true"/>
 				<filter appMode="car" minzoom="16" color="#250033ff" strokeWidth="1.5"/>
 				<filter minzoom="13" strokeWidth="1"/>
-				<groupFilter nightMode="true" color="#ff9600"/>
-				<groupFilter nightMode="true" appMode="car" color="#25ff9600"/>
+				<groupFilter nightMode="true" color="#c79f00"/>
+				<groupFilter nightMode="true" appMode="car" color="#25c79f00"/>
 			</filter>
 
 			<!-- Cycleways redesigned -->
@@ -1091,8 +1092,8 @@
 				<filter minzoom="14" maxzoom="15" strokeWidth="4"/>
 				<filter minzoom="16" maxzoom="17" strokeWidth="5"/>
 				<filter minzoom="18" strokeWidth="7"/>
-				<groupFilter nightMode="true" color="#ff9600"/>
-				<groupFilter nightMode="true" appMode="car" color="#25ff9600"/>
+				<groupFilter nightMode="true" color="#c79f00"/>
+				<groupFilter nightMode="true" appMode="car" color="#25c79f00"/>
 			</filter>
 
 			<!-- Surface grade section for highway=track,footway,cycleway,path -->
