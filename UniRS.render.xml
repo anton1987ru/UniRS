@@ -549,7 +549,7 @@
 				<filter nightMode="true" minzoom="6" color="#183f28" shader="" tag="landuse" value="forest"/>
 
 
-				<filter minzoom="13" tag="landuse" value="construction" color="#cac090" color_2="#666666" strokeWidth_2="0.5" pathEffect_2="8_4"/>
+				<filter minzoom="12" tag="landuse" value="construction" color="#cac090" color_2="#666666" strokeWidth_2="0.5" pathEffect_2="8_4"/>
 				<filter tag="amenity" value="library" disable="true"/>
 				<filter tag="amenity" value="cinema" disable="true"/>
 				<filter appMode="car" tag="amenity" value="bicycle_parking" disable="true"/>
