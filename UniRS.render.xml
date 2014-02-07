@@ -1096,6 +1096,13 @@
 				<groupFilter nightMode="true" appMode="car" color="#25c79f00"/>
 			</filter>
 
+			<filter tag="highway" value="bridleway" color="#339900" pathEffect="4_2">
+				<filter appMode="car" minzoom="12" maxzoom="15" disable="yes"/>
+				<filter appMode="car" minzoom="16" color="#25339900" strokeWidth="1.5"/>
+				<filter minzoom="12" maxzoom="12" strokeWidth="0.7"/>
+				<filter minzoom="13" strokeWidth="1.5"/>
+			</filter>
+
 			<!-- Surface grade section for highway=track,footway,cycleway,path -->
 			<groupFilter showSurfaceGrade="true" minzoom="14">
 				<filter additional="surface:grade=3" color__1="#00d8ff"/>
@@ -1246,6 +1253,7 @@
 			<groupFilter lessDetails="true" tag="highway" value="footway" minzoom="12" maxzoom="14" disable="true"/>
 			<groupFilter lessDetails="true" tag="highway" value="path" minzoom="12" maxzoom="13" disable="true"/>
 			<groupFilter lessDetails="true" tag="highway" value="steps" minzoom="14" maxzoom="14" disable="true"/>
+			<groupFilter lessDetails="true" tag="highway" value="bridleway" minzoom="12" maxzoom="13" disable="true"/>
 
 		</group>
 
