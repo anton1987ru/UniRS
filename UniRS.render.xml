@@ -17,10 +17,10 @@
 	<!-- Show more small-sized polygons when lessDetails mode is not active -->
 		<filter lessDetails="false" attrIntValue="30"/>
 	</renderingAttribute>
-<renderingAttribute name="gpxColor">
+	<renderingAttribute name="gpxColor">
 		<filter attrColorValue="#99f40977"/>
-</renderingAttribute>
-
+	</renderingAttribute>
+		
 	<order>
 
 		<filter appMode="bicycle" tag="lcn_network" value="lcn" order="110"/>
@@ -170,7 +170,7 @@
 		</group>
 
 		<!-- Outline added to water fonts. Also textColor changed to be more contrast. -->
-		<group textColor="#193c5f" textHaloRadius="1">
+		<group textColor="#2375aa" textHaloColor="#ddf1fd" textHaloRadius="1">
 			<filter minzoom="3" textSize="12" textWrapWidth="20" tag="place" value="ocean" textOrder="3"/>
 			<filter minzoom="5" textSize="12" textWrapWidth="20" tag="place" value="sea" textOrder="5"/>
 			<filter minzoom="6" textSize="12" textWrapWidth="20" tag="natural" value="water" textOrder="10"/>
