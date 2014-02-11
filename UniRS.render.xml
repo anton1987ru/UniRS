@@ -151,7 +151,7 @@
 				<groupFilter tag="highway" value="raceway" textColor="#666666"/>
 				<groupFilter nightMode="true" tag="highway" value="raceway" textColor="#ffffff" textHaloColor="#777777"/>
 			</group>
-			<groupFilter nightMode="true" textColor="#ffffff" textHaloColor="#000000" textHaloRadius="2"/>
+			<groupFilter nightMode="true" textColor="#ffffff" textHaloColor="#333333" textHaloRadius="2"/>
 		</group>
 
 		<group textColor="#000000" textWrapWidth="20" textHaloRadius="1">
