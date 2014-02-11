@@ -154,7 +154,6 @@
 			<groupFilter nightMode="true" textColor="#ffffff" textHaloColor="#000000" textHaloRadius="2"/>
 		</group>
 
-		<!-- Fonts of 'place' tag are outlined and black -->
 		<group textColor="#000000" textWrapWidth="20" textHaloRadius="1">
 			<filter minzoom="4" textSize="14" textColor="#9d6c9d" textWrapWidth="20" tag="place" value="state"/>
 			<filter minzoom="4" textSize="14" textColor="#9d6c9d" textWrapWidth="20" tag="place" value="region"/>
@@ -200,10 +199,10 @@
 			<filter minzoom="18" tag="building" value="" textSize="15" textDy="7" textWrapWidth="20" textOrder="101"/>
 			<filter minzoom="18" tag="addr:housenumber" value="" textSize="15" textDy="-15" textWrapWidth="20" textOrder="102"/>
 			<groupFilter textColor="#000000" textHaloRadius="1"/>
-			<groupFilter nightMode="true" textColor="#ffffff" textHaloRadius="1" textHaloColor="#777777"/>
+			<groupFilter nightMode="true" textColor="#ffffff" textHaloRadius="1" textHaloColor="#555555"/>
 		</group>
 		<filter minzoom="18" maxzoom="18" tag="addr:flats" value="" textSize="10" textColor="#2f4154" textHaloRadius="1" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref"/>
-		<filter minzoom="19" textSize="10" tag="addr:flats" value="" textColor="#2f4154" textHaloRadius="1" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref" nameTag2="addr:flats"/>
+		<filter minzoom="19" tag="addr:flats" value="" textSize="10" textColor="#2f4154" textHaloRadius="1" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref" nameTag2="addr:flats"/>
 		<filter nightMode="true" minzoom="18" maxzoom="18" tag="addr:flats" value="" textSize="10" textColor="#cae4ff" textHaloColor="#777777" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref"/>
 		<filter nightMode="true" minzoom="19" textSize="10" tag="addr:flats" value="" textColor="#cae4ff" textHaloColor="#777777" textDy="7" textWrapWidth="20" textOrder="103" nameTag="ref" nameTag2="addr:flats"/>
 
@@ -225,7 +224,7 @@
 
 		<!-- Outline added to some amenities fonts, colors changed -->
 		<group textSize="12" textColor="#493a00" textHaloRadius="1" textHaloColor="#fff8db" textDy="7" textWrapWidth="20">
-			<filter minzoom="15" tag="amenity" value="place_of_worship"/>
+<!--			<filter minzoom="15" tag="amenity" value="place_of_worship"/>-->
 			<filter minzoom="17" tag="amenity" value="embassy"/>
 			<filter minzoom="16" tag="amenity" value="townhall"/>
 			<filter minzoom="17" tag="office" value="government"/>
@@ -238,6 +237,56 @@
 			<groupFilter nightMode="true" textColor="#ece0b1" textHaloColor="#777777"/>
 		</group>
 
+		<group textSize="12" textColor="#000033" textHaloRadius="1" textDy="7" textWrapWidth="20">
+			<filter minzoom="16" tag="sport" value="horse_racing"/>
+			<filter minzoom="16" tag="sport" value="soccer"/>
+			<filter minzoom="16" tag="sport" value="skating"/>
+			<filter minzoom="17" tag="sport" value="archery"/>
+			<filter minzoom="16" tag="sport" value="baseball"/>
+			<filter minzoom="15" tag="leisure" value="stadium"/>
+			<filter minzoom="17" tag="sport" value="canoe"/>
+			<filter minzoom="16" tag="sport" value="tennis"/>
+			<filter minzoom="16" tag="sport" value="shooting"/>
+			<filter minzoom="16" tag="sport" value="golf"/>
+			<filter minzoom="16" tag="sport" value="skiing"/>
+			<filter minzoom="16" tag="sport" value="swimming"/>
+			<filter minzoom="17" tag="sport" value="diving"/>
+			<filter minzoom="17" tag="sport" value="scuba_diving"/>
+			<filter minzoom="17" tag="sport" value="billiard"/>
+			<filter minzoom="17" tag="sport" value="gymnastics"/>
+			<filter minzoom="16" tag="leisure" value="playground"/>
+			<filter minzoom="16" tag="leisure" value="water_park"/>
+			<filter minzoom="16" tag="leisure" value="sports_centre"/>
+			<filter minzoom="16" tag="leisure" value="ice_rink"/>
+			<filter minzoom="17" tag="leisure" value="fishing"/>
+			<filter minzoom="17" tag="leisure" value="bird_hide"/>
+			<filter minzoom="15" tag="leisure" value=""/>
+			<groupFilter nightMode="true" textColor="#fefeff" textHaloColor="#444455"/>
+		</group>
+
+		<group textSize="12" textColor="#444444" textHaloRadius="1" textDy="7" textWrapWidth="20">
+			<filter minzoom="17" tag="amenity" value="prison"/>
+			<filter minzoom="16" tag="amenity" value="place_of_worship"/>
+
+			<filter minzoom="17" tag="amenity" value="bank"/>
+			<filter minzoom="17" tag="amenity" value="bureau_de_change"/>
+
+			<filter minzoom="17" tag="amenity" value="embassy"/>
+			<filter minzoom="16" tag="amenity" value="townhall"/>
+			<filter minzoom="16" tag="amenity" value="courthouse"/>
+			<filter minzoom="17" tag="office" value="government"/>
+			<filter minzoom="17" tag="amenity" value="public_building"/>
+			<filter minzoom="17" tag="amenity" value="community_centre"/>
+			<filter minzoom="17" tag="amenity" value="social_centre"/>
+			<filter minzoom="17" tag="amenity" value="library"/>
+
+			<filter minzoom="16" tag="amenity" value="kindergarten"/>
+			<filter minzoom="16" tag="amenity" value="school"/>
+			<filter minzoom="15" tag="amenity" value="college"/>
+			<filter minzoom="15" textBold="true" tag="amenity" value="university"/>
+			<groupFilter nightMode="true" textColor="#eeeeee" textHaloColor="#444444"/>
+		</group>
+
 		<!-- Outline added to some 'natural' tags fonts -->
 		<group textHaloRadius="1">
 			<filter minzoom="13" textSize="12" textColor="#000000" textWrapWidth="15" tag="natural" value="wood" textOrder="10"/>
@@ -246,12 +295,9 @@
 			<groupFilter nightMode="true" textHaloColor="#cccccc"/>
 		</group>
 
-		<!-- Disabling landuse=military text on zooms 12-14 -->
-			<filter minzoom="12" maxzoom="14" tag="landuse" value="military" disable="true"/>
-
-		<!-- Disabling 2 amenities texts on zooms 12-14 -->
-			<filter minzoom="15" maxzoom="15" tag="amenity" value="college" disable="true"/>
-			<filter minzoom="15" maxzoom="15" tag="amenity" value="university" disable="true"/>
+		<filter minzoom="12" maxzoom="14" tag="landuse" value="military" disable="true"/>
+		<filter minzoom="15" maxzoom="15" tag="amenity" value="college" disable="true"/>
+		<filter minzoom="15" maxzoom="15" tag="amenity" value="university" disable="true"/>
 
 		<!-- Less intrusive shops and foods section -->
 		<group lessIntrusiveShopsFood="true" minzoom="15" maxzoom="18" disable="true">
