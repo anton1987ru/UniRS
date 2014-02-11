@@ -1238,12 +1238,6 @@
 				</filter>
 				<filter color__1="#000000" strokeWidth__1="8.5" pathEffect__1="6_4" color_0="#ffffff" strokeWidth_0="6" pathEffect_0=""/>
 			</groupFilter>
-<!--			<groupFilter layer="-1">
-				<filter nightMode="true" appMode="car" tag="highway" value="footway" minzoom="16" color__1="#33ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#33000000" strokeWidth_0="5" pathEffect_0=""/>
-				<filter nightMode="true" appMode="car" tag="highway" value="steps" minzoom="16" color__1="#33ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#33000000" strokeWidth_0="5" pathEffect_0=""/>
-				<filter nightMode="true" minzoom="14" color__1="#ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#000000" strokeWidth_0="5" pathEffect_0=""/>
-				<filter color__1="#000000" strokeWidth__1="8.5" pathEffect__1="6_4" color_0="#ffffff" strokeWidth_0="6" pathEffect_0=""/>
-			</groupFilter>    -->
 
 			<!-- Adding shadows to highway=track,footway,cycleway,path in 'noPolygons' mode for better visibility -->
 			<groupFilter noPolygons="true" shadowRadius=":1" shadowColor="#999999"/>
