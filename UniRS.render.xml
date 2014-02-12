@@ -718,7 +718,6 @@
 
 		<group noPolygons="false">
 
-			<!-- Changed colors of some landuse and amenities -->
 			<group>
 				<filter minzoom="13" color="#f2caea" color_2="#920029" strokeWidth_2="2" tag="tourism" value="attraction"/>
 				<groupFilter nightMode="true" color="#834522" color_2="#6dffd6"/>
@@ -1156,7 +1155,7 @@
 				<filter minzoom="13" strokeWidth="1.5"/>
 			</filter>
 
-			<!-- Surface grade section for highway=track,footway,cycleway,path -->
+			<!-- Surface grade section for highway=track,footway,cycleway,path,bridleway -->
 			<groupFilter showSurfaceGrade="true" minzoom="14">
 				<filter additional="surface:grade=3" color__1="#00d8ff"/>
 				<filter additional="surface:grade=2" color__1="#cbf6fe"/>
@@ -1172,7 +1171,7 @@
 				<filter additional="smoothness=very_horrible" color__1="#fe5050"/>
 				<filter additional="smoothness=impassable" color__1="#ff1111"/>
 			</groupFilter>
-			<!-- Surface section for highway=track,footway,cycleway,path -->
+			<!-- Surface section for highway=track,footway,cycleway,path,bridleway -->
 			<groupFilter showSurfaces="true" minzoom="14" pathEffect_0="9_5">
 				<filter additional="surface=unpaved" color_0="#cc9900"/>
 				<filter additional="surface=sand" color_0="#ffd700"/>
@@ -1204,8 +1203,10 @@
 				<filter additional="surface=compacted" color_0="#a7cdf8"/>
 			</groupFilter>
 
-			<!-- Access section for highway=track,footway,cycleway,path -->
+			<!-- Access section for highway=track,footway,cycleway,path,bridleway -->
 			<groupFilter showAccess="true">
+				<filter appMode="pedestrian" additional="foot=yes" color_0="#00000000"/>
+				<filter appMode="bicycle" additional="bicycle=yes" color_0="#00000000"/>
 				<filter additional="access=private" color_0="#feb3b3" color__1="#00000000" cap_0="ROUND">
 					<filter minzoom="14" maxzoom="14" color_0="#00000000"/>
 					<filter minzoom="15" maxzoom="15" pathEffect_0="3_8"/>
