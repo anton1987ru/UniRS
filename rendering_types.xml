@@ -27,6 +27,8 @@
 	<type tag="access" value="customers" minzoom="15" additional="true" only_map="true"/>
 	<type tag="access" value="delivery" minzoom="15" additional="true" only_map="true"/>
 	<type tag="fee" value="yes" minzoom="15" additional="true"/>
+	<type tag="foot" value="yes" minzoom="15" additional="true"/>
+	<type tag="bicycle" value="yes" minzoom="15" additional="true"/>
 
 	<type tag="religion" value="christian" minzoom="15" additional="true"/>
 	<type tag="religion" value="jewish" minzoom="15" additional="true"/>

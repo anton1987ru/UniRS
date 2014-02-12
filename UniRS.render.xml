@@ -936,54 +936,57 @@
 				<groupFilter appMode="pedestrian" nightMode="true" tag="highway" value="pedestrian" color="#b3d9bd"/>
 			</group>
 
-				<groupFilter showSurfaceGrade="true" minzoom="14">
-					<filter additional="surface:grade=3" color_2="#00d8ff"/>
-					<filter additional="surface:grade=2" color_2="#cbf6fe"/>
-					<filter additional="smoothness=excellent" color_2="#00d8ff"/>
-					<filter additional="smoothness=good" color_2="#7debff"/>
-					<filter additional="smoothness=intermediate" color_2="#b1f3ff"/>
+			<groupFilter showSurfaceGrade="true" minzoom="14">
+				<filter additional="surface:grade=3" color_2="#00d8ff"/>
+				<filter additional="surface:grade=2" color_2="#cbf6fe"/>
+				<filter additional="smoothness=excellent" color_2="#00d8ff"/>
+				<filter additional="smoothness=good" color_2="#7debff"/>
+				<filter additional="smoothness=intermediate" color_2="#b1f3ff"/>
 
-					<filter additional="surface:grade=1" color_2="#fea9a9"/>
-					<filter additional="surface:grade=0" color_2="#fd9191"/>
-					<filter additional="smoothness=bad" color_2="#febcbc"/>
-					<filter additional="smoothness=very_bad" color_2="#fea9a9"/>
-					<filter additional="smoothness=horrible" color_2="#ff7f7f"/>
-					<filter additional="smoothness=very_horrible" color_2="#fe5050"/>
-					<filter additional="smoothness=impassable" color_2="#ff1111"/>
-				</groupFilter>
+				<filter additional="surface:grade=1" color_2="#fea9a9"/>
+				<filter additional="surface:grade=0" color_2="#fd9191"/>
+				<filter additional="smoothness=bad" color_2="#febcbc"/>
+				<filter additional="smoothness=very_bad" color_2="#fea9a9"/>
+				<filter additional="smoothness=horrible" color_2="#ff7f7f"/>
+				<filter additional="smoothness=very_horrible" color_2="#fe5050"/>
+				<filter additional="smoothness=impassable" color_2="#ff1111"/>
+			</groupFilter>
 
-				<groupFilter showSurfaces="true" minzoom="14" pathEffect_3="9_5">
-					<filter additional="surface=unpaved" color_3="#cc9900"/>
-					<filter additional="surface=sand" color_3="#ffd700"/>
-					<filter additional="surface=grass" color_3="#1fbe1f"/>
-					<filter additional="surface=grass_paver" color_3="#a7bef8"/>
-					<filter additional="surface=ground" color_3="#cc9900"/>
-					<filter additional="surface=earth" color_3="#cc9900"/>
-					<filter additional="surface=dirt" color_3="#a9820f"/>
-					<filter additional="surface=mud" color_3="#765902"/>
-					<filter additional="surface=ice" color_3="#9feeef"/>
-					<filter additional="surface=salt" color_3="#7eded8"/>
-					<filter additional="surface=snow" color_3="#9feeef"/>
+			<groupFilter showSurfaces="true" minzoom="14" pathEffect_3="9_5">
+				<filter additional="surface=unpaved" color_3="#cc9900"/>
+				<filter additional="surface=sand" color_3="#ffd700"/>
+				<filter additional="surface=grass" color_3="#1fbe1f"/>
+				<filter additional="surface=grass_paver" color_3="#a7bef8"/>
+				<filter additional="surface=ground" color_3="#cc9900"/>
+				<filter additional="surface=earth" color_3="#cc9900"/>
+				<filter additional="surface=dirt" color_3="#a9820f"/>
+				<filter additional="surface=mud" color_3="#765902"/>
+				<filter additional="surface=ice" color_3="#9feeef"/>
+				<filter additional="surface=salt" color_3="#7eded8"/>
+				<filter additional="surface=snow" color_3="#9feeef"/>
 
-					<filter additional="surface=asphalt" color_3="#ada7f8"/>
-					<filter additional="surface=paved" color_3="#a7cdf8"/>
-					<filter additional="surface=concrete" color_3="#a7cdf8"/>
-					<filter additional="surface=concrete:plates" color_3="#a7cdf8"/>
-					<filter additional="surface=concrete:lanes" color_3="#a7cdf8"/>
-					<filter additional="surface=sett" color_3="#a7cdf8"/>
-					<filter additional="surface=cobblestone" color_3="#a7cdf8"/>
-					<filter additional="surface=paving_stones" color_3="#a7cdf8"/>
+				<filter additional="surface=asphalt" color_3="#ada7f8"/>
+				<filter additional="surface=paved" color_3="#a7cdf8"/>
+				<filter additional="surface=concrete" color_3="#a7cdf8"/>
+				<filter additional="surface=concrete:plates" color_3="#a7cdf8"/>
+				<filter additional="surface=concrete:lanes" color_3="#a7cdf8"/>
+				<filter additional="surface=sett" color_3="#a7cdf8"/>
+				<filter additional="surface=cobblestone" color_3="#a7cdf8"/>
+				<filter additional="surface=paving_stones" color_3="#a7cdf8"/>
 
-					<filter additional="surface=pebblestone" color_3="#a7cdf8"/>
-					<filter additional="surface=granite" color_3="#a7cdf8"/>
-					<filter additional="surface=metal" color_3="#a7cdf8"/>
-					<filter additional="surface=wood" color_3="#a7cdf8"/>
-					<filter additional="surface=gravel" color_3="#a7cdf8"/>
-					<filter additional="surface=fine_gravel" color_3="#a7cdf8"/>
-					<filter additional="surface=compacted" color_3="#a7cdf8"/>
-				</groupFilter>
-				<groupFilter showAccess="true">
-					<filter additional="access=private" color_3="#feb3b3" color_2="#00000000" cap_3="ROUND">
+				<filter additional="surface=pebblestone" color_3="#a7cdf8"/>
+				<filter additional="surface=granite" color_3="#a7cdf8"/>
+				<filter additional="surface=metal" color_3="#a7cdf8"/>
+				<filter additional="surface=wood" color_3="#a7cdf8"/>
+				<filter additional="surface=gravel" color_3="#a7cdf8"/>
+				<filter additional="surface=fine_gravel" color_3="#a7cdf8"/>
+				<filter additional="surface=compacted" color_3="#a7cdf8"/>
+			</groupFilter>
+
+			<groupFilter showAccess="true">
+				<filter appMode="pedestrian" additional="foot=yes" color_3="#00000000"/>
+				<filter appMode="bicycle" additional="bicycle=yes" color_3="#00000000"/>
+				<filter additional="access=private" color_3="#feb3b3" color_2="#00000000" cap_3="ROUND">
 					<filter minzoom="14" maxzoom="14" color_3="#00000000"/>
 					<filter minzoom="15" maxzoom="15" pathEffect_3="3_8"/>
 					<filter minzoom="16" maxzoom="16" pathEffect_3="4_11"/>
