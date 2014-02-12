@@ -1095,18 +1095,18 @@
 			<!-- Footways redesigned -->
 			<filter tag="highway" value="footway" color="#0033ff" pathEffect="3.5_1.5">
 				<filter appMode="car" minzoom="13" maxzoom="15" disable="true"/>
-				<filter appMode="car" minzoom="16" color="#250033ff" strokeWidth="1.5"/>
+				<filter appMode="car" minzoom="16" color="#130033ff" strokeWidth="1.5"/>
 				<filter minzoom="13" strokeWidth="1"/>
 				<groupFilter nightMode="true" color="#c79f00"/>
-				<groupFilter nightMode="true" appMode="car" color="#25c79f00"/>
+				<groupFilter nightMode="true" appMode="car" color="#13c79f00"/>
 			</filter>
 
 			<!-- Cycleways redesigned -->
 			<filter tag="highway" value="cycleway" color="#a85bff" pathEffect="12_4">
 				<filter appMode="bicycle" minzoom="12" maxzoom="13" strokeWidth="3"/>
 				<filter appMode="bicycle" minzoom="14" strokeWidth="4"/>
-				<filter appMode="car" minzoom="13" maxzoom="15" disable="yes"/>
-				<filter appMode="car" color="#33a85bff" strokeWidth="1.5"/>
+				<filter appMode="car" minzoom="13" maxzoom="16" disable="yes"/>
+				<filter appMode="car" color="#15a85bff" strokeWidth="1.5"/>
 				<filter lessDetails="true" minzoom="12" maxzoom="12" disable="true"/>
 				<filter minzoom="12" maxzoom="12" strokeWidth="1"/>
 				<filter minzoom="13" maxzoom="13" strokeWidth="1.5"/>
@@ -1117,7 +1117,7 @@
 			<!-- Paths redesigned (color, size, style)	-->
 			<filter tag="highway" value="path" color="#00896e" pathEffect="1.5_1.5">
 				<filter appMode="car" minzoom="13" maxzoom="15" disable="yes"/>
-				<filter appMode="car" minzoom="16" color="#2500896e" strokeWidth="1.5"/>
+				<filter appMode="car" minzoom="16" color="#1800896e" strokeWidth="1.5"/>
 				<filter minzoom="12" maxzoom="12" strokeWidth="1"/>
 				<filter minzoom="13" strokeWidth="1.5"/>
 				<filter minzoom="14" strokeWidth="1.5"/>
@@ -1130,7 +1130,7 @@
 					<filter additional="sac_scale=difficult_alpine_hiking" color="#fa5073" pathEffect="2_3"/>
 					<filter nightMode="true" color="#75ffd8"/>
 				</groupFilter>
-				<groupFilter nightMode="true" appMode="car" color="#2500896e"/>
+				<groupFilter nightMode="true" appMode="car" color="#1800896e"/>
 			</filter>
 
 			<!-- Steps redesigned (color, size, style)	-->
@@ -1139,18 +1139,18 @@
 				<filter appMode="pedestrian" minzoom="16" maxzoom="17" strokeWidth="6"/>
 				<filter appMode="pedestrian" minzoom="18" strokeWidth="8"/>
 				<filter appMode="car" minzoom="13" maxzoom="15" disable="true"/>
-				<filter appMode="car" minzoom="16" maxzoom="17" color="#250000ff" strokeWidth="5"/>
-				<filter appMode="car" minzoom="18" color="#250000ff" strokeWidth="7"/>
+				<filter appMode="car" minzoom="16" maxzoom="17" color="#130000ff" strokeWidth="5"/>
+				<filter appMode="car" minzoom="18" color="#130000ff" strokeWidth="7"/>
 				<filter minzoom="14" maxzoom="15" strokeWidth="4"/>
 				<filter minzoom="16" maxzoom="17" strokeWidth="5"/>
 				<filter minzoom="18" strokeWidth="7"/>
 				<groupFilter nightMode="true" color="#c79f00"/>
-				<groupFilter nightMode="true" appMode="car" color="#25c79f00"/>
+				<groupFilter nightMode="true" appMode="car" color="#13c79f00"/>
 			</filter>
 
 			<filter tag="highway" value="bridleway" color="#339900" pathEffect="4_2">
 				<filter appMode="car" minzoom="12" maxzoom="15" disable="yes"/>
-				<filter appMode="car" minzoom="16" color="#25339900" strokeWidth="1.5"/>
+				<filter appMode="car" minzoom="16" color="#15339900" strokeWidth="1.5"/>
 				<filter minzoom="12" maxzoom="12" strokeWidth="0.7"/>
 				<filter minzoom="13" strokeWidth="1.5"/>
 			</filter>
