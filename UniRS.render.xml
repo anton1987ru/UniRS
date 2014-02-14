@@ -1131,6 +1131,7 @@
 					<filter nightMode="true" color="#75ffd8"/>
 				</groupFilter>
 				<groupFilter nightMode="true" appMode="car" color="#1800896e"/>
+				<groupFilter nightMode="true" color="#006d57"/>
 			</filter>
 
 			<!-- Steps redesigned (color, size, style)	-->
