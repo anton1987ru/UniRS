@@ -1306,6 +1306,22 @@
 
 		</group>
 
+		<group>
+			<filter tag="cycleway" value="lane"/>
+			<filter tag="cycleway" value="track"/>
+			<filter tag="cycleway" value="opposite_lane"/>
+			<groupFilter color="#a85bff" pathEffect="12_4">
+				<filter appMode="bicycle" minzoom="12" maxzoom="13" strokeWidth="3"/>
+				<filter appMode="bicycle" minzoom="14" strokeWidth="4"/>
+				<filter appMode="car" minzoom="13" maxzoom="16" disable="yes"/>
+				<filter appMode="car" color="#15a85bff" strokeWidth="1.5"/>
+				<filter lessDetails="true" minzoom="12" maxzoom="12" disable="true"/>
+				<filter minzoom="12" maxzoom="12" strokeWidth="1"/>
+				<filter minzoom="13" maxzoom="13" strokeWidth="1.5"/>
+				<filter minzoom="14" strokeWidth="1.5"/>
+			</groupFilter>
+		</group>
+
 		<!-- Added support of man_made=embankment and embankment=yes tags -->
 		<group noPolygons="false">
 			<filter tag="man_made" value="embankment" minzoom="15" color="#33ffffff" color_0="#77999999" color__1="#44000000" strokeWidth="6" strokeWidth_0="8" cap="ROUND" cap_0="ROUND">
