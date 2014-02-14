@@ -1267,7 +1267,7 @@
 			<groupFilter layer="1">
 				<filter nightMode="true">
 					<filter appMode="car">
-						<filter tag="highway" value="highway" minzoom="16" color__1="#25ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#55000000" pathEffect_0="" strokeWidth_0="8"/>
+						<filter tag="highway" value="footway" minzoom="16" color__1="#25ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#55000000" pathEffect_0="" strokeWidth_0="8"/>
 						<filter tag="highway" value="steps" minzoom="16" color__1="#25ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#55000000" pathEffect_0="" strokeWidth_0="8"/>
 					</filter>
 					<filter minzoom="14" color__1="#ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#000000" pathEffect_0="" strokeWidth_0="8"/>
