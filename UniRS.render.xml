@@ -1418,6 +1418,7 @@
 			<filter minzoom="9" maxzoom="12" strokeWidth="1:1"/>
 			<filter minzoom="13" maxzoom="13" strokeWidth="1:2" color_2="#ffffff" strokeWidth_2="1" pathEffect_2="8_12"/>
 			<filter minzoom="14" strokeWidth="1:2" color_2="#ffffff" strokeWidth_2="1" pathEffect_2="0_11_8_1"/>
+			<groupFilter nightMode="true" color="#555555" color_2="#cccccc"/>
 		</filter>
 		<filter tag="railway" value="tram" color="#444444">
 			<filter appMode="car" layer="-1" minzoom="13" maxzoom="14" disable="true"/>
