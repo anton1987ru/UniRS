@@ -1408,6 +1408,8 @@
 		<!-- Railways -->
 		<filter tag="railway" value="rail" color="#999999">
 			<filter appMode="car" layer="-1" minzoom="9" maxzoom="13" disable="true"/>
+			<filter appMode="car" minzoom="9" maxzoom="15" disable="true"/>
+			<filter appMode="bicycle" minzoom="9" maxzoom="15" disable="true"/>
 			<filter appMode="bicycle" layer="-1" minzoom="9" maxzoom="13" disable="true"/>
 			<filter layer="-1" minzoom="9" maxzoom="13" strokeWidth="1:1" pathEffect="5_2"/>
 			<filter appMode="car" layer="-1" minzoom="14" strokeWidth="1:2" color="#25999999" color_2="#25ffffff" strokeWidth_2="1:2" pathEffect_2="4_4"/>
@@ -1432,6 +1434,12 @@
 			<filter minzoom="13" maxzoom="14" strokeWidth="1"/>
 			<filter minzoom="15" strokeWidth="1:1"/>
 		</filter>
+		
+		<filter appMode="car" minzoom="13" maxzoom="15" tag="railway" value="subway" disable="true"/>
+		<filter appMode="car" minzoom="13" maxzoom="15" tag="railway" value="light_rail" disable="true"/>
+		<filter appMode="bicycle" minzoom="13" maxzoom="15" tag="railway" value="subway" disable="true"/>
+		<filter appMode="bicycle" minzoom="13" maxzoom="15" tag="railway" value="light_rail" disable="true"/>
+		
 		<group layer="-1" minzoom="13" pathEffect="5_3">
 			<filter nightMode="true" tag="railway" value="subway" color="#666666" strokeWidth="2"/>
 			<filter nightMode="true" tag="railway" value="light_rail" color="#505050" strokeWidth="2"/>
@@ -1440,6 +1448,7 @@
 			<filter appMode="car" tag="railway" value="light_rail" color="#25666666" strokeWidth="1:1"/>
 			<filter appMode="bicycle" tag="railway" value="light_rail" color="#25666666" strokeWidth="1:1"/>
 		</group>
+
 		<!-- Railway and other transport platforms that have layer=-1 are dotted now -->
 		<group>
 			<filter tag="railway" value="platform"/>
