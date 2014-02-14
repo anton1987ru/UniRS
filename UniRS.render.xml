@@ -1270,7 +1270,7 @@
 						<filter tag="highway" value="footway" minzoom="16" color__1="#25ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#55000000" pathEffect_0="" strokeWidth_0="8"/>
 						<filter tag="highway" value="steps" minzoom="16" color__1="#25ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#55000000" pathEffect_0="" strokeWidth_0="8"/>
 					</filter>
-					<filter minzoom="14" color__1="#ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#000000" pathEffect_0="" strokeWidth_0="8"/>
+					<filter minzoom="14" color__1="#ffffff" strokeWidth__1="10" pathEffect__1="" color_0="#333333" pathEffect_0="" strokeWidth_0="8"/>
 				</filter>
 				<filter appMode="car">
 					<filter tag="highway" value="footway" color__1="#25000000" strokeWidth__1="8" pathEffect__1="" color_0="#55ffffff" pathEffect_0="" strokeWidth_0="6"/>
@@ -1285,7 +1285,7 @@
 						<filter tag="highway" value="footway" minzoom="16" color__1="#25ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#55000000" strokeWidth_0="5" pathEffect_0=""/>
 						<filter tag="highway" value="steps" minzoom="16" color__1="#25ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#55000000" strokeWidth_0="5" pathEffect_0=""/>
 					</filter>
-					<filter minzoom="14" color__1="#ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#000000" strokeWidth_0="5" pathEffect_0=""/>
+					<filter minzoom="14" color__1="#ffffff" strokeWidth__1="7.5" pathEffect__1="6_4" color_0="#333333" strokeWidth_0="5" pathEffect_0=""/>
 				</filter>
 				<filter appMode="car">
 					<filter tag="highway" value="footway" minzoom="16" color__1="#25000000" strokeWidth__1="8.5" pathEffect__1="6_4" color_0="#55ffffff" strokeWidth_0="6" pathEffect_0=""/>
